@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Demandra — AI Demand Forecasting</title>
+<meta name="description" content="Demandra uses AI to forecast demand for retailers and wholesalers, cutting stockouts and overstock — so you order the right amount, before you need it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css?v=1" />
+<link rel="icon" type="image/png" href="assets/logo-mark.png?v=1">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Demandra logo"></span><span style="background:#B5502E"></span></span>
+      Demandra
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#problem">Problem</a>
+      <a href="#ai">AI Technology</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#market">Market</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="login.html" class="btn btn--line nav__m-only nav__m-login">Log in</a>
+      <a href="#demo" class="btn btn--rust nav__m-only nav__m-demo">Get started</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="login.html" class="nav__login">Log in</a>
+      <a href="#demo" class="btn btn--rust">Get started</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav__scrim" id="navScrim"></div>
+
+<section class="hero">
+  <div class="container hero__copy reveal">
+    <h1>Know what sells <span class="text-accent">before it runs out.</span></h1>
+    <p class="hero__sub">Demandra reads sales history and market signals with AI, and forecasts demand for every SKU — so you order the right amount, before stockouts or overstock cost you.</p>
+    <div class="hero__actions">
+      <a href="#demo" class="btn btn--rust btn--lg">Get started
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#how" class="btn btn--line btn--lg">See how it works</a>
+    </div>
+    <p class="hero__note">No credit card · Data-protection ready · Built for retail &amp; wholesale teams</p>
+  </div>
+  <div class="chart-wrap reveal" data-d="2">
+    <div class="chart-callout"><i></i> Live MVP — forecast updates daily</div>
+    <svg viewBox="0 0 1180 340" preserveAspectRatio="none">
+      <line x1="0" y1="60" x2="1180" y2="60" stroke="#16302F" stroke-opacity=".08"/>
+      <line x1="0" y1="130" x2="1180" y2="130" stroke="#16302F" stroke-opacity=".08"/>
+      <line x1="0" y1="200" x2="1180" y2="200" stroke="#16302F" stroke-opacity=".08"/>
+      <line x1="0" y1="270" x2="1180" y2="270" stroke="#16302F" stroke-opacity=".08"/>
+      <line x1="700" y1="20" x2="700" y2="320" stroke="#16302F" stroke-opacity=".12" stroke-dasharray="3 5"/>
+      <path d="M0,230 C90,215 140,240 210,225 C290,208 340,235 410,210 C480,188 540,215 610,180 L700,160" fill="none" stroke="#16302F" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M700,160 C790,135 850,150 930,105 C1000,68 1060,90 1180,40" fill="none" stroke="#B5502E" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 10"/>
+      <circle cx="700" cy="160" r="6" fill="#16302F"/>
+      <path d="M0,230 C90,215 140,240 210,225 C290,208 340,235 410,210 C480,188 540,215 610,180 L700,160 C790,135 850,150 930,105 C1000,68 1060,90 1180,40 L1180,340 L0,340 Z" fill="url(#g)" opacity=".08"/>
+      <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16302F"/><stop offset="100%" stop-color="#16302F" stop-opacity="0"/></linearGradient></defs>
+    </svg>
+  </div>
+  <div class="chart-legend reveal" data-d="3">
+    <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#16302F"></span> Actual demand</span>
+    <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#B5502E"></span> AI forecast (30-day)</span>
+  </div>
+</section>
+
+<div class="trust">
+  <p class="trust__label">Built for teams who manage inventory for a living</p>
+  <div class="container trust__row">
+    <span class="trust__item">Retail chains</span>
+    <span class="trust__item">Wholesalers</span>
+    <span class="trust__item">Distributors</span>
+    <span class="trust__item">E-commerce brands</span>
+    <span class="trust__item">Manufacturers</span>
+  </div>
+</div>
+
+<section class="section" id="problem">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">The problem</span>
+      <h2 class="h2">Guessing demand means <span class="text-accent">tying up cash or losing sales.</span></h2>
+      <p class="lead" style="margin-inline:auto">Order too much and cash sits in a warehouse. Order too little and customers buy from someone else.</p>
+    </div>
+    <div class="stock-grid">
+      <div class="stock-card stock-card--over reveal" data-d="1">
+        <div class="stock-card__sku">SKU-4471</div>
+        <div class="stock-card__name">Ceramic mug set</div>
+        <div class="stock-meter"><i></i></div>
+        <div class="stock-card__status">Overstocked — 92% above forecast need</div>
+      </div>
+      <div class="stock-card stock-card--low reveal" data-d="2">
+        <div class="stock-card__sku">SKU-2290</div>
+        <div class="stock-card__name">Wireless charger</div>
+        <div class="stock-meter"><i></i></div>
+        <div class="stock-card__status">Understocked — stockout in 6 days</div>
+      </div>
+      <div class="stock-card stock-card--ok reveal" data-d="3">
+        <div class="stock-card__sku">SKU-8813</div>
+        <div class="stock-card__name">Canvas tote bag</div>
+        <div class="stock-meter"><i></i></div>
+        <div class="stock-card__status">On target — 58% of safety stock</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="solution">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">The solution</span>
+      <h2 class="h2">One system to <span class="text-accent">forecast, alert, and reorder</span> — automatically.</h2>
+      <p class="lead" style="margin-inline:auto">Demandra sits on top of your sales data and tells you exactly what to order, and when.</p>
+    </div>
+    <div class="step-trio">
+      <div class="step-trio__item reveal" data-d="1"><div class="step-trio__n">01</div><h3>Forecast every SKU</h3><p>AI predicts demand from sales history, seasonality, and market signals.</p></div>
+      <div class="step-trio__item reveal" data-d="2"><div class="step-trio__n">02</div><h3>Flag the risk</h3><p>Overstock and stockout risk surfaced before it costs you.</p></div>
+      <div class="step-trio__item reveal" data-d="3"><div class="step-trio__n">03</div><h3>Reorder with confidence</h3><p>A suggested order quantity, ready to send to your supplier.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ai">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">AI Technology</span>
+      <h2 class="h2">Forecasting is the engine, not a <span class="text-accent">dashboard feature.</span></h2>
+      <p class="lead">Demandra is built around a purpose-trained forecasting system for retail and wholesale demand.</p>
+    </div>
+    <div class="spec-cards4">
+      <div class="spec-card3 reveal" data-d="1">
+        <div class="spec-card3__k">Data in</div>
+        <h3>Every signal that drives demand</h3>
+        <p>Sales history, seasonality, promotions, and market or weather signals.</p>
+        <div class="tag-row"><span class="tag">Sales history</span><span class="tag">Seasonality</span></div>
+      </div>
+      <div class="spec-card3 reveal" data-d="2">
+        <div class="spec-card3__k">Data out</div>
+        <h3>A forecast, a risk flag, an order quantity</h3>
+        <p>A 30-day demand forecast per SKU, stockout/overstock risk, and a suggested reorder quantity.</p>
+        <div class="tag-row"><span class="tag">Forecast</span><span class="tag">Reorder qty</span></div>
+      </div>
+      <div class="spec-card3 reveal" data-d="3">
+        <div class="spec-card3__k">Techniques</div>
+        <h3>Time-series forecasting &amp; demand modeling</h3>
+        <p>Models trained on historical sell-through, with seasonality and promotional-lift modeling.</p>
+        <div class="tag-row"><span class="tag">Time-series</span><span class="tag">Demand modeling</span></div>
+      </div>
+      <div class="spec-card3 reveal" data-d="4">
+        <div class="spec-card3__k">Why scale matters</div>
+        <h3>Thousands of SKUs, forecast daily</h3>
+        <p>Catalogs run into the thousands. GPU-accelerated inference keeps every forecast current.</p>
+        <div class="tag-row"><span class="tag">GPU inference</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Product features</span>
+      <h2 class="h2">Everything a lean inventory team needs to stop guessing</h2>
+    </div>
+    <div class="feat-alt">
+      <div class="feat-alt__row reveal" data-d="1"><span>01</span><div><h3>SKU-Level Forecasting</h3><p>A 30-day demand forecast for every product you carry.</p></div></div>
+      <div class="feat-alt__row reveal" data-d="2"><span>02</span><div><h3>Stockout &amp; Overstock Alerts</h3><p>Risk flagged days before it becomes a problem.</p></div></div>
+      <div class="feat-alt__row reveal" data-d="3"><span>03</span><div><h3>Reorder Recommendations</h3><p>A suggested order quantity, ready for your supplier.</p></div></div>
+      <div class="feat-alt__row reveal" data-d="1"><span>04</span><div><h3>Seasonality Modeling</h3><p>Forecasts that account for seasonal and promotional swings.</p></div></div>
+      <div class="feat-alt__row reveal" data-d="2"><span>05</span><div><h3>Multi-Location Support</h3><p>Forecasts per warehouse or store, not just company-wide.</p></div></div>
+      <div class="feat-alt__row reveal" data-d="3"><span>06</span><div><h3>Supplier Reporting</h3><p>Shareable forecast reports for your supplier conversations.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 class="h2">From sales data to a reorder in four steps</h2>
+    </div>
+    <div class="flow-simple">
+      <div class="flow-simple__step reveal" data-d="1"><h3>Connect your data</h3><p>Link your POS, ERP, or e-commerce platform.</p></div>
+      <div class="flow-simple__step reveal" data-d="2"><h3>AI forecasts demand</h3><p>Every SKU forecast daily, automatically.</p></div>
+      <div class="flow-simple__step reveal" data-d="3"><h3>Risk gets flagged</h3><p>Stockout and overstock risk surfaced early.</p></div>
+      <div class="flow-simple__step reveal" data-d="4"><h3>You reorder with confidence</h3><p>A ready-to-send suggested order quantity.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="tech">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Technology &amp; Infrastructure</span>
+      <h2 class="h2">A modern, secure <span class="text-accent">tech stack</span> built for retail data</h2>
+      <p class="lead">Demandra runs on cloud infrastructure for secure storage, API hosting, and AI inference — with GPU-accelerated compute powering forecasts at catalog scale.</p>
+    </div>
+    <div class="infra-rows3">
+      <div class="infra-row4 reveal" data-d="1"><b>Cloud infrastructure</b><p>Secure, scalable storage keeps every retailer's sales data isolated and encrypted.</p></div>
+      <div class="infra-row4 reveal" data-d="2"><b>GPU-accelerated AI</b><p>Accelerated compute powers forecasting across thousands of SKUs.</p></div>
+      <div class="infra-row4 reveal" data-d="3"><b>Security &amp; compliance</b><p>Encryption in transit and at rest, with role-based access for sensitive sales data.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="market">
+  <div class="container market-cols2">
+    <div class="reveal">
+      <span class="eyebrow">Market opportunity</span>
+      <div class="market-block2"><b>Target users</b><p>Retail chains, wholesalers, and distributors managing SKU-level inventory.</p></div>
+    </div>
+    <div class="market-mini-rows2 reveal" data-d="2">
+      <div class="market-mini2"><b>Launch markets</b><p>Nigeria, Kenya, and South Africa first — expanding to UK and US mid-market retailers.</p></div>
+      <div class="market-mini2"><b>Revenue model</b><p>Per-SKU subscription plus a tier for multi-location forecasting.</p></div>
+      <div class="market-mini2"><b>Growth plan</b><p>Land through POS and ERP integration partners, expand by SKU count.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="traction">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Traction &amp; MVP status</span>
+      <h2 class="h2">Early, but real</h2>
+      <p class="lead">Demandra is live and in active use across a first cohort of organizations. Real, current figures — reported honestly.</p>
+    </div>
+    <div class="stat-row4">
+      <div class="stat-cell3 reveal" data-d="1"><div class="stat-cell3__num"><span class="count" data-to="8">0</span></div><div class="stat-cell3__label">organizations live</div></div>
+      <div class="stat-cell3 reveal" data-d="2"><div class="stat-cell3__num"><span class="count" data-to="41000">0</span>+</div><div class="stat-cell3__label">SKUs forecast</div></div>
+      <div class="stat-cell3 reveal" data-d="3"><div class="stat-cell3__num"><span class="count" data-to="87">0</span>%</div><div class="stat-cell3__label">forecast accuracy</div></div>
+      <div class="stat-cell3 reveal" data-d="4"><div class="stat-cell3__num">Live</div><div class="stat-cell3__label">MVP in active use</div></div>
+    </div>
+    <p class="banner reveal"><b>Our focus:</b> cut stockout incidents by up to 45% for connected SKUs.</p>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Roadmap</span>
+      <h2 class="h2">What we're building next</h2>
+    </div>
+    <div class="road-list2">
+      <div class="road-item2 reveal" data-d="1"><div><h3>SKU-level forecasting engine</h3><p>Daily demand forecasts, live in the MVP.</p></div><span class="road-item2__state road-item2__state--done">Shipped</span></div>
+      <div class="road-item2 reveal" data-d="2"><div><h3>Stockout &amp; overstock alerts</h3><p>Risk flagged before it becomes a problem.</p></div><span class="road-item2__state road-item2__state--done">Shipped</span></div>
+      <div class="road-item2 reveal" data-d="3"><div><h3>Reorder recommendations</h3><p>Suggested order quantities per SKU.</p></div><span class="road-item2__state road-item2__state--now">In progress</span></div>
+      <div class="road-item2 reveal" data-d="4"><div><h3>Multi-location forecasting</h3><p>Per-warehouse and per-store demand forecasts.</p></div><span class="road-item2__state road-item2__state--next">Next</span></div>
+      <div class="road-item2 reveal" data-d="1"><div><h3>POS &amp; ERP integrations</h3><p>Direct connections to common retail systems.</p></div><span class="road-item2__state road-item2__state--next">Planned</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="team">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Team</span>
+      <h2 class="h2">Real people building Demandra</h2>
+      <p class="lead" style="margin-inline:auto">A small team of engineers and retail-ops specialists.</p>
+    </div>
+    <div class="team-row8">
+      <div class="member-card3 reveal" data-d="1">
+        <div class="member-card3__ph">FB</div>
+        <h3>Folake Bankole</h3>
+        <div class="role">Founder &amp; CEO</div>
+        <p>Leads Demandra's mission to help retailers stop guessing and start forecasting demand.</p>
+        <div class="member-card3__socials">
+          <a href="#" class="li" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.3H4.8V19h2.3V9.3zM5.95 5.4a1.35 1.35 0 10-.05 2.7 1.35 1.35 0 00.05-2.7zM19.2 19h-2.3v-4.7c0-1.2-.43-1.98-1.5-1.98-.82 0-1.3.55-1.52 1.08-.08.19-.1.45-.1.72V19h-2.3s.03-8.02 0-8.85h2.3v1.25c.3-.47.85-1.14 2.08-1.14 1.52 0 2.66.99 2.66 3.13V19z"/></svg></a>
+          <a href="#" class="li" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3h3l-7 8 8 10h-6l-5-6-5 6H3l7.5-9L3 3h6l4.5 5.5z"/></svg></a>
+          <a href="mailto:folake@demandra.io" class="li" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </div>
+      <div class="member-card3 reveal" data-d="2">
+        <div class="member-card3__ph">CI</div>
+        <h3>Chukwuemeka Ibe</h3>
+        <div class="role">Co-founder &amp; CTO</div>
+        <p>Leads Demandra's forecasting models, data pipeline, and cloud infrastructure.</p>
+        <div class="member-card3__socials">
+          <a href="mailto:chukwuemeka@demandra.io" class="li" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="container">
+    <div class="cta-chart reveal">
+      <div>
+        <span class="eyebrow">Get started</span>
+        <h2 class="h2" style="margin-top:14px">See Demandra forecast your own catalog in 20 minutes</h2>
+        <p class="lead">Book a walkthrough — no commitment. We'll forecast a sample SKU live.</p>
+        <form class="cta-chart__form" id="demoForm" novalidate>
+          <input id="email" type="email" placeholder="you@company.com" required />
+          <button type="submit" class="btn btn--rust btn--block">Get started</button>
+        </form>
+        <p class="cta-chart__note">By submitting you agree to our <a href="privacy.html" style="color:var(--teal-700)">Privacy Policy</a>. We never sell your data.</p>
+      </div>
+      <div class="cta-chart__preview">
+        <svg viewBox="0 0 400 180" preserveAspectRatio="none">
+          <path d="M0,140 C40,130 70,145 110,120 C150,100 180,130 220,95 L260,80" fill="none" stroke="#B5502E" stroke-width="3" stroke-linecap="round"/>
+          <path d="M260,80 C300,60 330,70 400,30" fill="none" stroke="#F4C7A6" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
+          <circle cx="260" cy="80" r="5" fill="#fff"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__stats">
+    <div><b><span class="count" data-to="8">0</span></b><span>organizations live</span></div>
+    <div><b><span class="count" data-to="41">0</span>k+</b><span>SKUs forecast</span></div>
+    <div><b><span class="count" data-to="87">0</span>%</b><span>forecast accuracy</span></div>
+  </div>
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand">
+          <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Demandra logo"></span><span style="background:#B5502E"></span></span>
+          Demandra
+        </a>
+        <p class="footer__about">AI demand forecasting — know what sells before it runs out.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#how">How it works</a></li><li><a href="#ai">AI technology</a></li><li><a href="#roadmap">Roadmap</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#team">Team</a></li><li><a href="#market">Market</a></li><li><a href="#demo">Get started</a></li><li><a href="login.html">Log in</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li><li><a href="privacy.html#data">Data protection</a></li><li><a href="#demo">Contact</a></li></ul></div>
+    </div>
+    <p class="footer__disclaimer">Demandra helps teams forecast demand and plan inventory. It does not guarantee sales outcomes, and reorder suggestions should always be reviewed by your team before ordering.</p>
+    <div class="footer__bottom">
+      <span>© 2026 Demandra Labs Ltd. All rights reserved.</span>
+      <div class="footer__socials">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.3H4.8V19h2.3V9.3zM5.95 5.4a1.35 1.35 0 10-.05 2.7 1.35 1.35 0 00.05-2.7zM19.2 19h-2.3v-4.7c0-1.2-.43-1.98-1.5-1.98-.82 0-1.3.55-1.52 1.08-.08.19-.1.45-.1.72V19h-2.3s.03-8.02 0-8.85h2.3v1.25c.3-.47.85-1.14 2.08-1.14 1.52 0 2.66.99 2.66 3.13V19z"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3h3l-7 8 8 10h-6l-5-6-5 6H3l7.5-9L3 3h6l4.5 5.5z"/></svg></a>
+        <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
