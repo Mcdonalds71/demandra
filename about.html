@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Service — Demandra</title>
-  <meta name="description" content="Terms of service governing the access and use of the Demandra retail demand intelligence platform." />
+  <title>About Us &amp; Our Retail Roots — Demandra</title>
+  <meta name="description" content="Demandra was founded in Lagos by FMCG supply chain veterans and machine learning researchers to solve the store inventory blindspot across Africa." />
+  <meta name="keywords" content="Demandra founders, retail tech startup Lagos, Nigerian SaaS founders, retail AI Africa" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -26,7 +27,7 @@
           <a href="solution.html" class="nav-item-link">Planning</a>
           <a href="index.html#aisle-simulator" class="nav-item-link">Demand Intelligence</a>
           <a href="technology.html" class="nav-item-link">Retail Operations</a>
-          <a href="about.html" class="nav-item-link">Company</a>
+          <a href="about.html" class="nav-item-link is-current" aria-current="page">Company</a>
         </nav>
 
         <div class="nav-actions">
@@ -59,78 +60,154 @@
   </div>
 
   <main id="mainContent">
+    <!-- Hero -->
     <section class="page-hero">
       <div class="container">
         <div class="page-hero-inner">
           <div class="breadcrumbs">
             <a href="index.html">Demandra</a>
             <span>/</span>
-            <span>Terms of Service</span>
+            <span>About Demandra</span>
           </div>
           <h1 class="page-title">
-            Terms of Service.
+            Demand intelligence for the African retail floor.
           </h1>
           <p class="page-lead">
-            Effective Date: January 1, 2026. These terms govern the commercial use of Demandra's retail demand forecasting platform by corporate subscribers.
+            We are retail operators and time-series engineers building the predictive replenishment infrastructure that powers supermarkets from Lagos to Nairobi.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="container">
-      <div class="legal-layout">
-        <aside class="legal-nav">
-          <a href="#acceptance" class="legal-nav-link is-active">1. Acceptance</a>
-          <a href="#accounts" class="legal-nav-link">2. Accounts &amp; Security</a>
-          <a href="#usage" class="legal-nav-link">3. Acceptable Use</a>
-          <a href="#proprietary" class="legal-nav-link">4. Intellectual Property</a>
-          <a href="#termination" class="legal-nav-link">5. Termination</a>
-          <a href="#liability" class="legal-nav-link">6. Liability Limitations</a>
-        </aside>
+    <!-- Story Section with Founders Portrait -->
+    <section class="inner-section">
+      <div class="container">
+        <div class="detail-grid">
+          <div class="detail-content">
+            <div class="eyebrow-tag">OUR ORIGIN STORY</div>
+            <h2>Born on the supermarket floors of Lagos.</h2>
+            <p>
+              In 2023, our founders spent four months inside the stockrooms of five major supermarket chains in Lagos and Abuja. What we witnessed was astonishing: store managers were spending 15 hours every week manually tallying paper receipts and typing rough guesses into Excel spreadsheets.
+            </p>
+            <p>
+              When emergency stockouts hit on Friday afternoons, customers walked away annoyed, while hundreds of crates of competing goods sat untouched in storage rooms just 15 kilometers across town.
+            </p>
+            <p>
+              We built Demandra to replace that guesswork with continuous mathematical certainty. By linking POS checkouts directly to predictive neural networks, we turn fragmented retail floors into self-orchestrating, synchronized store networks.
+            </p>
+            <div style="margin-top: 2rem;">
+              <button type="button" class="btn-primary" data-open-modal>
+                Get Started
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
 
-        <article class="legal-body">
-          <h2 id="acceptance">1. Acceptance of Terms</h2>
-          <p>
-            By accessing or using the Demandra platform, APIs, or edge agents, you agree to be bound by these Terms of Service. If you are entering into these terms on behalf of a corporate entity, supermarket chain, or distribution company, you warrant that you possess the legal authority to bind such entity.
-          </p>
+          <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 1.5rem;">
+            <img src="assets/img/team-founders.jpg" alt="Demandra executive leadership team in Lagos office" style="width: 100%; height: auto; border: 1px solid var(--line-subtle); margin-bottom: 1.25rem;" />
+            <div style="font-size: 0.8125rem; color: var(--text-ink-muted); line-height: 1.5;">
+              <strong style="color: var(--text-ink);">Demandra Executive Leadership:</strong> Dr. Amina Bello (CTO), Folarin Adeyemi (CEO), and Chuka Okonkwo (CPO) at our headquarters in Lekki Phase 1, Lagos.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="accounts">2. Corporate Accounts &amp; Access Controls</h2>
-          <p>
-            Subscribers must ensure that all authorized users maintain strong, distinct credentials. We recommend federating access through corporate Microsoft Entra ID or Google Workspace single sign-on.
-          </p>
-          <p>
-            You are solely responsible for all activities occurring under your administrative domain and for revoking credentials when store managers or merchandising staff depart your organization.
-          </p>
+    <!-- Leadership Profiles -->
+    <section class="inner-section alt-bg" id="founders">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: 3rem;">
+          <div class="eyebrow-tag">EXECUTIVE LEADERSHIP</div>
+          <h2 class="section-headline">Experienced operators solving real supply chains.</h2>
+        </div>
 
-          <h2 id="usage">3. Acceptable Use &amp; API Quotas</h2>
-          <p>
-            You agree not to reverse engineer, decompile, or disassemble any aspect of the Demandra predictive forecasting engine, or use the outputs to build a competing retail demand modeling software.
-          </p>
-          <p>
-            API usage must conform to rate limits specified in your tier schedule. Automated scripts exceeding reasonable batch parameters may be throttled to ensure infrastructure stability for all tenants.
-          </p>
+        <div class="cards-triad">
+          <div class="person" style="background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden;">
+            <div style="height: 300px; overflow: hidden; background: #101512; position: relative;">
+              <img src="assets/img/team-folarin.jpg" alt="Folarin Adeyemi, Co-founder and CEO" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block;" />
+              <div style="position: absolute; bottom: 12px; left: 12px; font-size: 10px; letter-spacing: 0.1em; font-weight: 700; color: #fff; background: rgba(16, 21, 18, 0.78); padding: 4px 8px; border-radius: 6px; text-transform: uppercase;">CEO · NIGERIAN</div>
+            </div>
+            <div style="padding: 1.5rem;">
+              <h3 style="margin: 0 0 0.25rem; font-size: 1.25rem;">Folarin Adeyemi</h3>
+              <p style="font-size: 0.8125rem; color: var(--green); font-weight: 600; margin: 0 0 0.75rem;">12+ Years FMCG Distribution Leadership</p>
+              <p style="font-size: 0.875rem; color: var(--muted); margin: 0; line-height: 1.5;">Former regional supply chain director managing ₦38B in annual food and beverage distribution across Nigeria, Ghana, and Côte d'Ivoire.</p>
+            </div>
+          </div>
 
-          <h2 id="proprietary">4. Intellectual Property Rights</h2>
-          <p>
-            Demandra Technologies Ltd and its licensors retain all rights, title, and interest in and to the platform, machine learning models, algorithms, documentation, and user interfaces.
-          </p>
-          <p>
-            Subscriber retains complete and unencumbered ownership of all POS sales receipts, inventory counts, store operational logs, and trade secrets submitted to the platform.
-          </p>
+          <div class="person" style="background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden;">
+            <div style="height: 300px; overflow: hidden; background: #101512; position: relative;">
+              <img src="assets/img/team-amina.jpg" alt="Dr. Amina Bello, Co-founder and CTO" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block;" />
+              <div style="position: absolute; bottom: 12px; left: 12px; font-size: 10px; letter-spacing: 0.1em; font-weight: 700; color: #fff; background: rgba(16, 21, 18, 0.78); padding: 4px 8px; border-radius: 6px; text-transform: uppercase;">CTO · NIGERIAN</div>
+            </div>
+            <div style="padding: 1.5rem;">
+              <h3 style="margin: 0 0 0.25rem; font-size: 1.25rem;">Dr. Amina Bello</h3>
+              <p style="font-size: 0.8125rem; color: var(--green); font-weight: 600; margin: 0 0 0.75rem;">PhD in Applied Time-Series Machine Learning</p>
+              <p style="font-size: 0.875rem; color: var(--muted); margin: 0; line-height: 1.5;">Pioneer of high-throughput retail demand forecasting architectures built on Microsoft Azure. Imperial College London &amp; ABU Zaria.</p>
+            </div>
+          </div>
 
-          <h2 id="termination">5. Term &amp; Termination</h2>
-          <p>
-            Annual subscriptions renew automatically unless either party provides written notice of non-renewal at least thirty (30) days prior to the expiration of the current billing cycle.
-          </p>
-          <p>
-            Upon termination, Subscriber will have thirty (30) days to download all historical demand forecasts, reorder logs, and ingested store data in standard CSV/JSON format, after which all tenant records are securely shredded.
-          </p>
+          <div class="person" style="background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden;">
+            <div style="height: 300px; overflow: hidden; background: #101512; position: relative;">
+              <img src="assets/img/team-chuka.jpg" alt="Chuka Okonkwo, Co-founder and CPO" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block;" />
+              <div style="position: absolute; bottom: 12px; left: 12px; font-size: 10px; letter-spacing: 0.1em; font-weight: 700; color: #fff; background: rgba(16, 21, 18, 0.78); padding: 4px 8px; border-radius: 6px; text-transform: uppercase;">CPO · NIGERIAN</div>
+            </div>
+            <div style="padding: 1.5rem;">
+              <h3 style="margin: 0 0 0.25rem; font-size: 1.25rem;">Chuka Okonkwo</h3>
+              <p style="font-size: 0.8125rem; color: var(--green); font-weight: 600; margin: 0 0 0.75rem;">Ex-Retail Operations Lead across 80+ Doors</p>
+              <p style="font-size: 0.875rem; color: var(--muted); margin: 0; line-height: 1.5;">Led merchandising operations, stock auditing, and store rollouts for prominent supermarket and pharmacy brands in West Africa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="liability">6. Limitation of Liability</h2>
-          <p>
-            To the maximum extent permitted by applicable Nigerian law, neither party shall be liable for indirect, incidental, or consequential damages resulting from lost sales or supplier stockouts.
+    <!-- Expansion Roadmap -->
+    <section class="inner-section">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: 3rem;">
+          <div class="eyebrow-tag">CONTINENTAL HORIZON</div>
+          <h2 class="section-headline">Our geographic expansion journey.</h2>
+        </div>
+
+        <div class="cards-triad">
+          <div class="feature-card" style="border-top: 4px solid var(--accent-leaf);">
+            <span class="feature-card-num">PHASE 1 // CURRENT</span>
+            <h3>Nigeria Core</h3>
+            <p>1,420+ active stores monitored across Lagos, Abuja, Port Harcourt, Ibadan, and Kano. Ingesting 8.4M daily SKU demand signals.</p>
+          </div>
+          <div class="feature-card" style="border-top: 4px solid var(--accent-clay);">
+            <span class="feature-card-num">PHASE 2 // 2026–2027</span>
+            <h3>West &amp; East Africa</h3>
+            <p>Expanding store coverage into Accra (Ghana), Nairobi (Kenya), Kigali (Rwanda), and Abidjan (Côte d'Ivoire) with multi-currency NGN, GHS, KES, and XOF reconciliation.</p>
+          </div>
+          <div class="feature-card" style="border-top: 4px solid var(--text-ink);">
+            <span class="feature-card-num">PHASE 3 // 2027+</span>
+            <h3>Continental Trade Bridges</h3>
+            <p>Pan-African FMCG trade corridors linking local distributors directly with European and Middle Eastern manufacturers via predictive volume allocations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-block">
+      <div class="container">
+        <div class="final-cta-box">
+          <div class="eyebrow-tag" style="margin-bottom: 0;">WORK WITH US</div>
+          <h2 class="section-headline">Join the future of retail replenishment.</h2>
+          <p class="section-lead">
+            Partner with Demandra to upgrade your supermarket or distribution network with predictive AI intelligence.
           </p>
-        </article>
+          <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button type="button" class="btn-primary" data-open-modal>
+              Get Started
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="pricing.html" class="btn-secondary">
+              View Store Pricing Plans
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

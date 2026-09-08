@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Service — Demandra</title>
-  <meta name="description" content="Terms of service governing the access and use of the Demandra retail demand intelligence platform." />
+  <title>Master SaaS Agreement &amp; Legal Framework — Demandra</title>
+  <meta name="description" content="Demandra Master SaaS Agreement, Service Level Commitments, and Commercial Data Terms for Enterprise Retail Subscribers." />
+  <meta name="keywords" content="Demandra terms, SaaS agreement, retail SLA, NDPR DPA Nigeria" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -65,13 +66,13 @@
           <div class="breadcrumbs">
             <a href="index.html">Demandra</a>
             <span>/</span>
-            <span>Terms of Service</span>
+            <span>Legal Documentation</span>
           </div>
           <h1 class="page-title">
-            Terms of Service.
+            Master SaaS Agreement &amp; Legal Terms.
           </h1>
           <p class="page-lead">
-            Effective Date: January 1, 2026. These terms govern the commercial use of Demandra's retail demand forecasting platform by corporate subscribers.
+            Demandra Technologies Ltd (RC 1928410) enterprise commercial framework, service availability commitments, and retail data custody terms.
           </p>
         </div>
       </div>
@@ -79,56 +80,66 @@
 
     <section class="container">
       <div class="legal-layout">
+        <!-- Sidebar Navigation -->
         <aside class="legal-nav">
-          <a href="#acceptance" class="legal-nav-link is-active">1. Acceptance</a>
-          <a href="#accounts" class="legal-nav-link">2. Accounts &amp; Security</a>
-          <a href="#usage" class="legal-nav-link">3. Acceptable Use</a>
-          <a href="#proprietary" class="legal-nav-link">4. Intellectual Property</a>
-          <a href="#termination" class="legal-nav-link">5. Termination</a>
-          <a href="#liability" class="legal-nav-link">6. Liability Limitations</a>
+          <a href="#company-details" class="legal-nav-link is-active">Corporate Entity</a>
+          <a href="#services-scope" class="legal-nav-link">Service Scope &amp; API</a>
+          <a href="#data-custody" class="legal-nav-link">Retail Data Custody</a>
+          <a href="#service-levels" class="legal-nav-link">99.9% Uptime SLA</a>
+          <a href="#fees-billing" class="legal-nav-link">Fees &amp; Currency</a>
+          <a href="#governing-law" class="legal-nav-link">Governing Law</a>
         </aside>
 
+        <!-- Document Body -->
         <article class="legal-body">
-          <h2 id="acceptance">1. Acceptance of Terms</h2>
+          <h2 id="company-details">1. Corporate Entity &amp; Parties</h2>
           <p>
-            By accessing or using the Demandra platform, APIs, or edge agents, you agree to be bound by these Terms of Service. If you are entering into these terms on behalf of a corporate entity, supermarket chain, or distribution company, you warrant that you possess the legal authority to bind such entity.
+            This Master Software-as-a-Service Agreement ("Agreement") is executed between Demandra Technologies Ltd, a private limited liability company incorporated under the laws of the Federal Republic of Nigeria with Corporate Affairs Commission registration number RC 1928410 ("Demandra", "we", or "us"), and the subscribing commercial retail entity ("Customer" or "Subscriber").
+          </p>
+          <p>
+            Registered Headquarters: Plot 8, Admiralty Way, Lekki Phase 1, Lagos, Nigeria. Electronic Contact: legal@demandra.ai.
           </p>
 
-          <h2 id="accounts">2. Corporate Accounts &amp; Access Controls</h2>
+          <h2 id="services-scope">2. Service Scope &amp; Platform Access</h2>
           <p>
-            Subscribers must ensure that all authorized users maintain strong, distinct credentials. We recommend federating access through corporate Microsoft Entra ID or Google Workspace single sign-on.
+            Demandra grants Subscriber a non-exclusive, non-transferable, commercial license during the subscription term to connect physical store POS terminals, access the cloud prediction portal, receive automated reorder recommendations, and execute inter-store inventory balancing routines.
           </p>
           <p>
-            You are solely responsible for all activities occurring under your administrative domain and for revoking credentials when store managers or merchandising staff depart your organization.
-          </p>
-
-          <h2 id="usage">3. Acceptable Use &amp; API Quotas</h2>
-          <p>
-            You agree not to reverse engineer, decompile, or disassemble any aspect of the Demandra predictive forecasting engine, or use the outputs to build a competing retail demand modeling software.
-          </p>
-          <p>
-            API usage must conform to rate limits specified in your tier schedule. Automated scripts exceeding reasonable batch parameters may be throttled to ensure infrastructure stability for all tenants.
+            Subscriber agrees to maintain secure credentials for Microsoft Entra ID or workspace email accounts. Subscriber retains sole administrative control over employee role delegations across store locations.
           </p>
 
-          <h2 id="proprietary">4. Intellectual Property Rights</h2>
+          <h2 id="data-custody">3. Retail Data Custody &amp; IP Protection</h2>
           <p>
-            Demandra Technologies Ltd and its licensors retain all rights, title, and interest in and to the platform, machine learning models, algorithms, documentation, and user interfaces.
+            <strong>Customer Ownership:</strong> Subscriber retains 100% exclusive proprietary ownership over all historical checkout transactions, SKU prices, barcode logs, vendor catalogs, and store performance reports ingested into Demandra.
           </p>
           <p>
-            Subscriber retains complete and unencumbered ownership of all POS sales receipts, inventory counts, store operational logs, and trade secrets submitted to the platform.
-          </p>
-
-          <h2 id="termination">5. Term &amp; Termination</h2>
-          <p>
-            Annual subscriptions renew automatically unless either party provides written notice of non-renewal at least thirty (30) days prior to the expiration of the current billing cycle.
-          </p>
-          <p>
-            Upon termination, Subscriber will have thirty (30) days to download all historical demand forecasts, reorder logs, and ingested store data in standard CSV/JSON format, after which all tenant records are securely shredded.
+            <strong>No Data Aggregation or Competitive Bleed:</strong> Demandra covenants never to aggregate, sell, license, or blend Subscriber's retail telemetry with third-party datasets or competing retailers.
           </p>
 
-          <h2 id="liability">6. Limitation of Liability</h2>
+          <h2 id="service-levels">4. Service Level Agreement (SLA) &amp; Uptime</h2>
           <p>
-            To the maximum extent permitted by applicable Nigerian law, neither party shall be liable for indirect, incidental, or consequential damages resulting from lost sales or supplier stockouts.
+            Demandra warrants 99.9% monthly service availability for our cloud API endpoints and real-time inference clusters, calculated on a calendar month basis excluding scheduled maintenance windows announced at least 72 hours in advance.
+          </p>
+          <ul>
+            <li><strong>&lt; 99.9% but ≥ 99.0%:</strong> 10% service credit applied to subsequent invoice.</li>
+            <li><strong>&lt; 99.0% but ≥ 95.0%:</strong> 25% service credit applied to subsequent invoice.</li>
+            <li><strong>&lt; 95.0%:</strong> 50% service credit applied to subsequent invoice.</li>
+          </ul>
+
+          <h2 id="fees-billing">5. Subscription Fees, Invoicing &amp; Currencies</h2>
+          <p>
+            Subscriptions are billed strictly based on the count of active physical retail doors provisioned on the platform. All plans are invoiced annually in advance.
+          </p>
+          <p>
+            For corporate entities domiciled in Nigeria, payments may be remitted in Nigerian Naira (NGN) via corporate electronic transfer or direct debit, calculated at the official Central Bank of Nigeria exchange rate on the date of quotation.
+          </p>
+
+          <h2 id="governing-law">6. Governing Law &amp; Dispute Resolution</h2>
+          <p>
+            This Agreement shall be construed and governed in all respects in accordance with the laws of the Federal Republic of Nigeria.
+          </p>
+          <p>
+            Any commercial controversy or dispute arising out of this Agreement that cannot be amicably settled within thirty (30) business days shall be referred to arbitration in Lagos, Nigeria, in accordance with the Arbitration and Mediation Act 2023.
           </p>
         </article>
       </div>

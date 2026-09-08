@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Service — Demandra</title>
-  <meta name="description" content="Terms of service governing the access and use of the Demandra retail demand intelligence platform." />
+  <title>Demand Planning &amp; Store Replenishment Solution — Demandra</title>
+  <meta name="description" content="Demandra connects checkout POS velocity, supplier lead times, and regional buying patterns to automate store replenishment across multi-store retail chains in Nigeria and Africa." />
+  <meta name="keywords" content="retail demand planning, FMCG inventory forecasting, store replenishment software, Lagos retail SaaS, Nigeria inventory AI" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,7 +15,7 @@
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- ============================ HEADER ============================ -->
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
@@ -23,7 +24,7 @@
       </a>
 
         <nav class="nav-menu" aria-label="Primary Navigation">
-          <a href="solution.html" class="nav-item-link">Planning</a>
+          <a href="solution.html" class="nav-item-link is-current" aria-current="page">Planning</a>
           <a href="index.html#aisle-simulator" class="nav-item-link">Demand Intelligence</a>
           <a href="technology.html" class="nav-item-link">Retail Operations</a>
           <a href="about.html" class="nav-item-link">Company</a>
@@ -59,83 +60,187 @@
   </div>
 
   <main id="mainContent">
+    <!-- Hero -->
     <section class="page-hero">
       <div class="container">
         <div class="page-hero-inner">
           <div class="breadcrumbs">
             <a href="index.html">Demandra</a>
             <span>/</span>
-            <span>Terms of Service</span>
+            <span>Solution Architecture</span>
           </div>
           <h1 class="page-title">
-            Terms of Service.
+            Retail demand intelligence designed for store networks.
           </h1>
           <p class="page-lead">
-            Effective Date: January 1, 2026. These terms govern the commercial use of Demandra's retail demand forecasting platform by corporate subscribers.
+            Eliminate stockouts on high-velocity SKUs and recover trapped working capital with autonomous store-level demand forecasting and automated dispatch orders.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="container">
-      <div class="legal-layout">
-        <aside class="legal-nav">
-          <a href="#acceptance" class="legal-nav-link is-active">1. Acceptance</a>
-          <a href="#accounts" class="legal-nav-link">2. Accounts &amp; Security</a>
-          <a href="#usage" class="legal-nav-link">3. Acceptable Use</a>
-          <a href="#proprietary" class="legal-nav-link">4. Intellectual Property</a>
-          <a href="#termination" class="legal-nav-link">5. Termination</a>
-          <a href="#liability" class="legal-nav-link">6. Liability Limitations</a>
-        </aside>
+    <!-- Core Solution Deep-Dive -->
+    <section class="inner-section">
+      <div class="container">
+        <div class="detail-grid">
+          <div class="detail-content">
+            <div class="eyebrow-tag">01 // BASKET VELOCITY MODELING</div>
+            <h2>Predict store depletion 14 days before shelves go empty.</h2>
+            <p>
+              Traditional retail inventory relies on retrospective averages — what sold last month or last quarter. In volatile markets like Lagos, Abuja, and Port Harcourt, consumer purchase behavior changes weekly based on local liquidity, regional payday schedules, inflation shifts, and transit gridlocks.
+            </p>
+            <p>
+              Demandra ingest POS transaction logs at the receipt line level every 15 minutes. Our models decompose item co-purchases, basket depth, and time-of-day traffic patterns to project SKU depletion curves across every individual shelf.
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="spec-item-name">POS Ingestion Frequency</span>
+                <span class="spec-item-val">Every 15 minutes (Webhook / Batch)</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Forecast Granularity</span>
+                <span class="spec-item-val">Store-SKU-Day</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Forecast Horizon</span>
+                <span class="spec-item-val">14 to 60 Days Rolling</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Model Accuracy Rate</span>
+                <span class="spec-item-val num-tabular">98.2% on top 20% FMCG volume</span>
+              </li>
+            </ul>
+          </div>
+          <div style="background: var(--bg-surface); border: 1px solid var(--line-main); overflow: hidden;">
+            <div style="position: relative; height: 220px; overflow: hidden; background: #000;">
+              <img src="assets/img/replenished-aisle.jpg" alt="Fully replenished supermarket aisle with Nigerian retail supervisor" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.6rem 1rem; background: rgba(18, 20, 19, 0.88); backdrop-filter: blur(8px); display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem;">
+                <span style="color: var(--text-warm-white); font-weight: 600;">Lekki Store #04 · Autonomous Replenish</span>
+                <span style="color: var(--accent-leaf); font-weight: 700; text-transform: uppercase;">98.2% Shelf Availability</span>
+              </div>
+            </div>
+            <div style="padding: 2rem;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--accent-leaf); margin-bottom: 1.25rem; text-transform: uppercase;">Real-Time Shelf Depletion Signals</div>
+              <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <div style="border-bottom: 1px solid var(--line-subtle); padding-bottom: 0.75rem;">
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9375rem;">
+                    <span>Lekki Megastore #04 · Dairy &amp; Malt</span>
+                    <span style="color: var(--alert-red); font-variant-numeric: tabular-nums; font-size: 0.8125rem;">Critical in 36h</span>
+                  </div>
+                  <div style="font-size: 0.8125rem; color: var(--text-ink-muted);">Current buffer: 48 crates. Predicted 3-day velocity: 142 crates. Auto-dispatch: 120 crates from Ikeja Hub.</div>
+                </div>
+                <div style="border-bottom: 1px solid var(--line-subtle); padding-bottom: 0.75rem;">
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9375rem;">
+                    <span>Wuse 2 Abuja #12 · Refined Oil (5L)</span>
+                    <span style="color: var(--accent-leaf); font-variant-numeric: tabular-nums; font-size: 0.8125rem;">Balanced Buffer (18D)</span>
+                  </div>
+                  <div style="font-size: 0.8125rem; color: var(--text-ink-muted);">Current buffer: 320 units. Projected monthly run-rate: 510 units. Auto-reorder scheduled for Sep 18.</div>
+                </div>
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9375rem;">
+                    <span>Trans-Amadi PHC #02 · Packaged Rice</span>
+                    <span style="color: var(--accent-leaf); font-variant-numeric: tabular-nums; font-size: 0.8125rem;">Dispatch En Route</span>
+                  </div>
+                  <div style="font-size: 0.8125rem; color: var(--text-ink-muted);">Order #ORD-8412 approved. 300 units dispatched from Central Distribution Center.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article class="legal-body">
-          <h2 id="acceptance">1. Acceptance of Terms</h2>
-          <p>
-            By accessing or using the Demandra platform, APIs, or edge agents, you agree to be bound by these Terms of Service. If you are entering into these terms on behalf of a corporate entity, supermarket chain, or distribution company, you warrant that you possess the legal authority to bind such entity.
-          </p>
+    <!-- Inter-Store Stock Balancing -->
+    <section class="inner-section alt-bg">
+      <div class="container">
+        <div class="detail-grid">
+          <div style="order: 2;" class="detail-content">
+            <div class="eyebrow-tag">02 // INTER-STORE BALANCING</div>
+            <h2>Re-route stock between stores before incurring fresh reorder costs.</h2>
+            <p>
+              In multi-store retail chains, one store often faces a critical stockout on premium beverages or imported staples while another branch 12 kilometers away holds 45 days of dormant stock.
+            </p>
+            <p>
+              Demandra identifies store-to-store variance in real time. Instead of triggering emergency supplier POs with 10-day lead times and minimum-order quantity surcharges, Demandra generates automated inter-store transfer manifests, routing excess units across municipal store clusters in hours.
+            </p>
+            <div style="margin-top: 2rem;">
+              <a href="technology.html" class="btn-secondary">
+                Explore Dispatch Logic
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <div style="order: 1; background: var(--bg-ivory); border: 1px solid var(--line-main); padding: 2.5rem;">
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-ink); margin-bottom: 1rem; text-transform: uppercase;">Lagos Municipal Cluster Transfer Simulation</div>
+            <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.9375rem;">
+              <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 1rem;">
+                <div style="font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">Surplus Detected: Ikeja Outlet #01</div>
+                <div style="color: var(--text-ink-muted);">SKU: Evaporated Milk (48-Pack) · 180 crates above 30-day velocity baseline.</div>
+              </div>
+              <div style="text-align: center; color: var(--accent-leaf); font-weight: 700;">
+                ↓ Recommended Transfer (65 Crates) ↓
+              </div>
+              <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 1rem;">
+                <div style="font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">Deficit Prevented: Victoria Island Store #03</div>
+                <div style="color: var(--text-ink-muted);">Depletion projected in 40h. Transfer avoids ₦1.8M in lost weekend sales.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="accounts">2. Corporate Accounts &amp; Access Controls</h2>
-          <p>
-            Subscribers must ensure that all authorized users maintain strong, distinct credentials. We recommend federating access through corporate Microsoft Entra ID or Google Workspace single sign-on.
-          </p>
-          <p>
-            You are solely responsible for all activities occurring under your administrative domain and for revoking credentials when store managers or merchandising staff depart your organization.
-          </p>
+    <!-- Three Capabilities Grid -->
+    <section class="inner-section">
+      <div class="container">
+        <div style="max-width: 680px;">
+          <div class="eyebrow-tag">RETAIL ENGINE CAPABILITIES</div>
+          <h2 class="section-headline">Everything your merchandising and logistics teams need.</h2>
+        </div>
+        <div class="cards-triad">
+          <div class="feature-card">
+            <span class="feature-card-num">CAPABILITY // 01</span>
+            <h3>Supplier Lead-Time Buffers</h3>
+            <p>Factored against local port customs clearing, fuel price variations, and regional distributor turnaround times so reorder triggers dynamically adjust.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card-num">CAPABILITY // 02</span>
+            <h3>Seasonal &amp; Holiday Spikes</h3>
+            <p>Pre-trained neural networks capture holiday spikes (Ramadan, Easter, December festivities, Back-to-School) with category-level elasticity projections.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card-num">CAPABILITY // 03</span>
+            <h3>Automated ERP Purchase Orders</h3>
+            <p>Seamless two-way integration with Odoo, Microsoft Dynamics 365, SAP Retail, and custom POS architectures via authenticated REST webhooks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="usage">3. Acceptable Use &amp; API Quotas</h2>
-          <p>
-            You agree not to reverse engineer, decompile, or disassemble any aspect of the Demandra predictive forecasting engine, or use the outputs to build a competing retail demand modeling software.
+    <!-- CTA Section -->
+    <section class="final-cta-block">
+      <div class="container">
+        <div class="final-cta-box">
+          <div class="eyebrow-tag" style="margin-bottom: 0;">ENTERPRISE DEPLOYMENT</div>
+          <h2 class="section-headline">Start forecasting demand across your retail stores.</h2>
+          <p class="section-lead">
+            Connect Demandra to your checkout POS in 48 hours and see immediate working capital recovery across all locations.
           </p>
-          <p>
-            API usage must conform to rate limits specified in your tier schedule. Automated scripts exceeding reasonable batch parameters may be throttled to ensure infrastructure stability for all tenants.
-          </p>
-
-          <h2 id="proprietary">4. Intellectual Property Rights</h2>
-          <p>
-            Demandra Technologies Ltd and its licensors retain all rights, title, and interest in and to the platform, machine learning models, algorithms, documentation, and user interfaces.
-          </p>
-          <p>
-            Subscriber retains complete and unencumbered ownership of all POS sales receipts, inventory counts, store operational logs, and trade secrets submitted to the platform.
-          </p>
-
-          <h2 id="termination">5. Term &amp; Termination</h2>
-          <p>
-            Annual subscriptions renew automatically unless either party provides written notice of non-renewal at least thirty (30) days prior to the expiration of the current billing cycle.
-          </p>
-          <p>
-            Upon termination, Subscriber will have thirty (30) days to download all historical demand forecasts, reorder logs, and ingested store data in standard CSV/JSON format, after which all tenant records are securely shredded.
-          </p>
-
-          <h2 id="liability">6. Limitation of Liability</h2>
-          <p>
-            To the maximum extent permitted by applicable Nigerian law, neither party shall be liable for indirect, incidental, or consequential damages resulting from lost sales or supplier stockouts.
-          </p>
-        </article>
+          <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button type="button" class="btn-primary" data-open-modal>
+              Get Started
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="pricing.html" class="btn-secondary">
+              View Store Plans
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ============================ FOOTER ============================ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-columns">
@@ -230,7 +335,7 @@
     </div>
   </footer>
 
-  <!-- Enterprise Modal -->
+  <!-- ============================ ENTERPRISE SIGNUP MODAL ============================ -->
   <div class="modal-backdrop" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
     <div class="modal-dialog">
       <div class="modal-head">

@@ -1,351 +1,847 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Demandra — AI Demand Forecasting</title>
-<meta name="description" content="Demandra uses AI to forecast demand for retailers and wholesalers, cutting stockouts and overstock — so you order the right amount, before you need it." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:wght@500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css?v=1" />
-<link rel="icon" type="image/png" href="assets/logo-mark.png?v=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demandra — AI Demand Prediction &amp; Unified Retail Planning</title>
+  <meta name="description" content="Know what every store will need next. Demandra connects checkout velocity, local consumer demand, and supplier lead times to predict store replenishment 14 days before shelves run empty." />
+  <meta name="theme-color" content="#08120c" />
+  <link rel="canonical" href="https://demandra.ai/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Demandra" />
+  <meta property="og:title" content="Demandra — Retail Demand Intelligence" />
+  <meta property="og:description" content="Enterprise AI retail demand prediction and replenishment platform for multi-store chains." />
+  <meta property="og:image" content="assets/img/hero-supermarket.jpg" />
+
+  <!-- Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Demandra Technologies Ltd",
+    "url": "https://demandra.ai/",
+    "logo": "https://demandra.ai/assets/logo-mark.png",
+    "description": "Enterprise AI retail demand forecasting and inventory replenishment platform for multi-store supermarket chains and FMCG distributors.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 8, Admiralty Way, Lekki Phase 1",
+      "addressLocality": "Lagos",
+      "addressCountry": "NG"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
 
-<header class="nav" id="nav">
-  <div class="container nav__inner">
-    <a href="index.html" class="brand">
-      <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Demandra logo"></span><span style="background:#B5502E"></span></span>
-      Demandra
-    </a>
-    <nav class="nav__links" id="navLinks">
-      <a href="#problem">Problem</a>
-      <a href="#ai">AI Technology</a>
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="#market">Market</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="login.html" class="btn btn--line nav__m-only nav__m-login">Log in</a>
-      <a href="#demo" class="btn btn--rust nav__m-only nav__m-demo">Get started</a>
-    </nav>
-    <div class="nav__cta">
-      <a href="login.html" class="nav__login">Log in</a>
-      <a href="#demo" class="btn btn--rust">Get started</a>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-<div class="nav__scrim" id="navScrim"></div>
-
-<section class="hero">
-  <div class="container hero__copy reveal">
-    <h1>Know what sells <span class="text-accent">before it runs out.</span></h1>
-    <p class="hero__sub">Demandra reads sales history and market signals with AI, and forecasts demand for every SKU — so you order the right amount, before stockouts or overstock cost you.</p>
-    <div class="hero__actions">
-      <a href="#demo" class="btn btn--rust btn--lg">Get started
-        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <!-- ============================ 1. FLOATING NAVIGATION BAR (Ultra-Sleek Pill Navbar) ============================ -->
+  <header class="site-nav-wrapper" id="siteNavWrapper">
+    <div class="nav-pill-container">
+      <!-- Authentic Demandra Brand Symbol (Extracted Directly from Master PRD Artwork) -->
+      <a href="index.html" class="nav-brand-symbol" aria-label="Demandra Home">
+        <img src="assets/img/demandra-symbol@2x.png" alt="Demandra" class="brand-symbol-img" width="36" height="36" />
       </a>
-      <a href="#how" class="btn btn--line btn--lg">See how it works</a>
-    </div>
-    <p class="hero__note">No credit card · Data-protection ready · Built for retail &amp; wholesale teams</p>
-  </div>
-  <div class="chart-wrap reveal" data-d="2">
-    <div class="chart-callout"><i></i> Live MVP — forecast updates daily</div>
-    <svg viewBox="0 0 1180 340" preserveAspectRatio="none">
-      <line x1="0" y1="60" x2="1180" y2="60" stroke="#16302F" stroke-opacity=".08"/>
-      <line x1="0" y1="130" x2="1180" y2="130" stroke="#16302F" stroke-opacity=".08"/>
-      <line x1="0" y1="200" x2="1180" y2="200" stroke="#16302F" stroke-opacity=".08"/>
-      <line x1="0" y1="270" x2="1180" y2="270" stroke="#16302F" stroke-opacity=".08"/>
-      <line x1="700" y1="20" x2="700" y2="320" stroke="#16302F" stroke-opacity=".12" stroke-dasharray="3 5"/>
-      <path d="M0,230 C90,215 140,240 210,225 C290,208 340,235 410,210 C480,188 540,215 610,180 L700,160" fill="none" stroke="#16302F" stroke-width="3.5" stroke-linecap="round"/>
-      <path d="M700,160 C790,135 850,150 930,105 C1000,68 1060,90 1180,40" fill="none" stroke="#B5502E" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 10"/>
-      <circle cx="700" cy="160" r="6" fill="#16302F"/>
-      <path d="M0,230 C90,215 140,240 210,225 C290,208 340,235 410,210 C480,188 540,215 610,180 L700,160 C790,135 850,150 930,105 C1000,68 1060,90 1180,40 L1180,340 L0,340 Z" fill="url(#g)" opacity=".08"/>
-      <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16302F"/><stop offset="100%" stop-color="#16302F" stop-opacity="0"/></linearGradient></defs>
-    </svg>
-  </div>
-  <div class="chart-legend reveal" data-d="3">
-    <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#16302F"></span> Actual demand</span>
-    <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#B5502E"></span> AI forecast (30-day)</span>
-  </div>
-</section>
 
-<div class="trust">
-  <p class="trust__label">Built for teams who manage inventory for a living</p>
-  <div class="container trust__row">
-    <span class="trust__item">Retail chains</span>
-    <span class="trust__item">Wholesalers</span>
-    <span class="trust__item">Distributors</span>
-    <span class="trust__item">E-commerce brands</span>
-    <span class="trust__item">Manufacturers</span>
-  </div>
-</div>
+      <!-- Spacious Primary Navigation Links (Per PRD Section 5) -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#blindspot" class="nav-link">Planning</a>
+        <a href="#neural-engine" class="nav-link">Demand Intelligence</a>
+        <a href="#value-chain" class="nav-link">Retail Operations</a>
+        <a href="#team" class="nav-link">Company</a>
+      </nav>
 
-<section class="section" id="problem">
-  <div class="container">
-    <div class="section-head section-head--center reveal">
-      <span class="eyebrow">The problem</span>
-      <h2 class="h2">Guessing demand means <span class="text-accent">tying up cash or losing sales.</span></h2>
-      <p class="lead" style="margin-inline:auto">Order too much and cash sits in a warehouse. Order too little and customers buy from someone else.</p>
-    </div>
-    <div class="stock-grid">
-      <div class="stock-card stock-card--over reveal" data-d="1">
-        <div class="stock-card__sku">SKU-4471</div>
-        <div class="stock-card__name">Ceramic mug set</div>
-        <div class="stock-meter"><i></i></div>
-        <div class="stock-card__status">Overstocked — 92% above forecast need</div>
-      </div>
-      <div class="stock-card stock-card--low reveal" data-d="2">
-        <div class="stock-card__sku">SKU-2290</div>
-        <div class="stock-card__name">Wireless charger</div>
-        <div class="stock-meter"><i></i></div>
-        <div class="stock-card__status">Understocked — stockout in 6 days</div>
-      </div>
-      <div class="stock-card stock-card--ok reveal" data-d="3">
-        <div class="stock-card__sku">SKU-8813</div>
-        <div class="stock-card__name">Canvas tote bag</div>
-        <div class="stock-meter"><i></i></div>
-        <div class="stock-card__status">On target — 58% of safety stock</div>
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nav-signin">Sign In</a>
+        <button type="button" class="btn-primary btn-nav-cta" data-open-modal>
+          Get Started
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section section--soft" id="solution">
-  <div class="container">
-    <div class="section-head section-head--center reveal">
-      <span class="eyebrow">The solution</span>
-      <h2 class="h2">One system to <span class="text-accent">forecast, alert, and reorder</span> — automatically.</h2>
-      <p class="lead" style="margin-inline:auto">Demandra sits on top of your sales data and tells you exactly what to order, and when.</p>
-    </div>
-    <div class="step-trio">
-      <div class="step-trio__item reveal" data-d="1"><div class="step-trio__n">01</div><h3>Forecast every SKU</h3><p>AI predicts demand from sales history, seasonality, and market signals.</p></div>
-      <div class="step-trio__item reveal" data-d="2"><div class="step-trio__n">02</div><h3>Flag the risk</h3><p>Overstock and stockout risk surfaced before it costs you.</p></div>
-      <div class="step-trio__item reveal" data-d="3"><div class="step-trio__n">03</div><h3>Reorder with confidence</h3><p>A suggested order quantity, ready to send to your supplier.</p></div>
-    </div>
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="navDrawer">
+    <a href="#blindspot" class="drawer-link">Planning</a>
+    <a href="#neural-engine" class="drawer-link">Demand Intelligence</a>
+    <a href="#value-chain" class="drawer-link">Retail Operations</a>
+    <a href="#team" class="drawer-link">Company Leadership</a>
+    <a href="solution.html" class="drawer-link">Solution Architecture</a>
+    <a href="pricing.html" class="drawer-link">Store Tiers &amp; Pricing</a>
+    <a href="login.html" class="drawer-link">Retail Ops Portal</a>
+    <button type="button" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;" data-open-modal>
+      Get Started
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
   </div>
-</section>
 
-<section class="section" id="ai">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">AI Technology</span>
-      <h2 class="h2">Forecasting is the engine, not a <span class="text-accent">dashboard feature.</span></h2>
-      <p class="lead">Demandra is built around a purpose-trained forecasting system for retail and wholesale demand.</p>
-    </div>
-    <div class="spec-cards4">
-      <div class="spec-card3 reveal" data-d="1">
-        <div class="spec-card3__k">Data in</div>
-        <h3>Every signal that drives demand</h3>
-        <p>Sales history, seasonality, promotions, and market or weather signals.</p>
-        <div class="tag-row"><span class="tag">Sales history</span><span class="tag">Seasonality</span></div>
+  <main id="mainContent">
+
+    <!-- ============================ 2. HERO — CINEMATIC FULL VIDEO BACKGROUND THEATER ============================ -->
+    <section class="hero-stage" id="hero">
+      <!-- Full Widescreen Video Backdrop Layer -->
+      <div class="hero-video-backdrop">
+        <video class="hero-bg-video" id="heroVideoElem" poster="assets/img/hero-supermarket.jpg" playsinline muted loop autoplay aria-label="Nigerian commercial retail inventory operations documentary video">
+          <source src="assets/video/hero-flow.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-video-overlay"></div>
       </div>
-      <div class="spec-card3 reveal" data-d="2">
-        <div class="spec-card3__k">Data out</div>
-        <h3>A forecast, a risk flag, an order quantity</h3>
-        <p>A 30-day demand forecast per SKU, stockout/overstock risk, and a suggested reorder quantity.</p>
-        <div class="tag-row"><span class="tag">Forecast</span><span class="tag">Reorder qty</span></div>
-      </div>
-      <div class="spec-card3 reveal" data-d="3">
-        <div class="spec-card3__k">Techniques</div>
-        <h3>Time-series forecasting &amp; demand modeling</h3>
-        <p>Models trained on historical sell-through, with seasonality and promotional-lift modeling.</p>
-        <div class="tag-row"><span class="tag">Time-series</span><span class="tag">Demand modeling</span></div>
-      </div>
-      <div class="spec-card3 reveal" data-d="4">
-        <div class="spec-card3__k">Why scale matters</div>
-        <h3>Thousands of SKUs, forecast daily</h3>
-        <p>Catalogs run into the thousands. GPU-accelerated inference keeps every forecast current.</p>
-        <div class="tag-row"><span class="tag">GPU inference</span></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section section--soft" id="features">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Product features</span>
-      <h2 class="h2">Everything a lean inventory team needs to stop guessing</h2>
-    </div>
-    <div class="feat-alt">
-      <div class="feat-alt__row reveal" data-d="1"><span>01</span><div><h3>SKU-Level Forecasting</h3><p>A 30-day demand forecast for every product you carry.</p></div></div>
-      <div class="feat-alt__row reveal" data-d="2"><span>02</span><div><h3>Stockout &amp; Overstock Alerts</h3><p>Risk flagged days before it becomes a problem.</p></div></div>
-      <div class="feat-alt__row reveal" data-d="3"><span>03</span><div><h3>Reorder Recommendations</h3><p>A suggested order quantity, ready for your supplier.</p></div></div>
-      <div class="feat-alt__row reveal" data-d="1"><span>04</span><div><h3>Seasonality Modeling</h3><p>Forecasts that account for seasonal and promotional swings.</p></div></div>
-      <div class="feat-alt__row reveal" data-d="2"><span>05</span><div><h3>Multi-Location Support</h3><p>Forecasts per warehouse or store, not just company-wide.</p></div></div>
-      <div class="feat-alt__row reveal" data-d="3"><span>06</span><div><h3>Supplier Reporting</h3><p>Shareable forecast reports for your supplier conversations.</p></div></div>
-    </div>
-  </div>
-</section>
+      <div class="container hero-container">
+        <!-- Editorial Headline Block (Crisp Contrast & Pure Uncluttered Video Backdrop) -->
+        <div class="hero-editorial-center">
+          <div class="mono-tag mono-tag-light">DEMANDRA OS 3.2 // AUTONOMOUS RETAIL PLATFORM</div>
 
-<section class="section" id="how">
-  <div class="container">
-    <div class="section-head section-head--center reveal">
-      <span class="eyebrow">How it works</span>
-      <h2 class="h2">From sales data to a reorder in four steps</h2>
-    </div>
-    <div class="flow-simple">
-      <div class="flow-simple__step reveal" data-d="1"><h3>Connect your data</h3><p>Link your POS, ERP, or e-commerce platform.</p></div>
-      <div class="flow-simple__step reveal" data-d="2"><h3>AI forecasts demand</h3><p>Every SKU forecast daily, automatically.</p></div>
-      <div class="flow-simple__step reveal" data-d="3"><h3>Risk gets flagged</h3><p>Stockout and overstock risk surfaced early.</p></div>
-      <div class="flow-simple__step reveal" data-d="4"><h3>You reorder with confidence</h3><p>A ready-to-send suggested order quantity.</p></div>
-    </div>
-  </div>
-</section>
+          <h1>Know what every store will need next.</h1>
 
-<section class="section section--soft" id="tech">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Technology &amp; Infrastructure</span>
-      <h2 class="h2">A modern, secure <span class="text-accent">tech stack</span> built for retail data</h2>
-      <p class="lead">Demandra runs on cloud infrastructure for secure storage, API hosting, and AI inference — with GPU-accelerated compute powering forecasts at catalog scale.</p>
-    </div>
-    <div class="infra-rows3">
-      <div class="infra-row4 reveal" data-d="1"><b>Cloud infrastructure</b><p>Secure, scalable storage keeps every retailer's sales data isolated and encrypted.</p></div>
-      <div class="infra-row4 reveal" data-d="2"><b>GPU-accelerated AI</b><p>Accelerated compute powers forecasting across thousands of SKUs.</p></div>
-      <div class="infra-row4 reveal" data-d="3"><b>Security &amp; compliance</b><p>Encryption in transit and at rest, with role-based access for sensitive sales data.</p></div>
-    </div>
-  </div>
-</section>
+          <p class="hero-subtext">
+            Demandra connects checkout velocity, local consumer demand, and supplier lead times across your retail network — predicting store replenishment 14 days before shelves run empty.
+          </p>
 
-<section class="section" id="market">
-  <div class="container market-cols2">
-    <div class="reveal">
-      <span class="eyebrow">Market opportunity</span>
-      <div class="market-block2"><b>Target users</b><p>Retail chains, wholesalers, and distributors managing SKU-level inventory.</p></div>
-    </div>
-    <div class="market-mini-rows2 reveal" data-d="2">
-      <div class="market-mini2"><b>Launch markets</b><p>Nigeria, Kenya, and South Africa first — expanding to UK and US mid-market retailers.</p></div>
-      <div class="market-mini2"><b>Revenue model</b><p>Per-SKU subscription plus a tier for multi-location forecasting.</p></div>
-      <div class="market-mini2"><b>Growth plan</b><p>Land through POS and ERP integration partners, expand by SKU count.</p></div>
-    </div>
-  </div>
-</section>
+          <div class="hero-cta-group">
+            <button type="button" class="btn-primary btn-hero" data-open-modal>
+              Get Started
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a class="btn-secondary btn-hero" href="#neural-engine">
+              Explore Prediction Model
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+          </div>
 
-<section class="section section--soft" id="traction">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Traction &amp; MVP status</span>
-      <h2 class="h2">Early, but real</h2>
-      <p class="lead">Demandra is live and in active use across a first cohort of organizations. Real, current figures — reported honestly.</p>
-    </div>
-    <div class="stat-row4">
-      <div class="stat-cell3 reveal" data-d="1"><div class="stat-cell3__num"><span class="count" data-to="8">0</span></div><div class="stat-cell3__label">organizations live</div></div>
-      <div class="stat-cell3 reveal" data-d="2"><div class="stat-cell3__num"><span class="count" data-to="41000">0</span>+</div><div class="stat-cell3__label">SKUs forecast</div></div>
-      <div class="stat-cell3 reveal" data-d="3"><div class="stat-cell3__num"><span class="count" data-to="87">0</span>%</div><div class="stat-cell3__label">forecast accuracy</div></div>
-      <div class="stat-cell3 reveal" data-d="4"><div class="stat-cell3__num">Live</div><div class="stat-cell3__label">MVP in active use</div></div>
-    </div>
-    <p class="banner reveal"><b>Our focus:</b> cut stockout incidents by up to 45% for connected SKUs.</p>
-  </div>
-</section>
-
-<section class="section" id="roadmap">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Roadmap</span>
-      <h2 class="h2">What we're building next</h2>
-    </div>
-    <div class="road-list2">
-      <div class="road-item2 reveal" data-d="1"><div><h3>SKU-level forecasting engine</h3><p>Daily demand forecasts, live in the MVP.</p></div><span class="road-item2__state road-item2__state--done">Shipped</span></div>
-      <div class="road-item2 reveal" data-d="2"><div><h3>Stockout &amp; overstock alerts</h3><p>Risk flagged before it becomes a problem.</p></div><span class="road-item2__state road-item2__state--done">Shipped</span></div>
-      <div class="road-item2 reveal" data-d="3"><div><h3>Reorder recommendations</h3><p>Suggested order quantities per SKU.</p></div><span class="road-item2__state road-item2__state--now">In progress</span></div>
-      <div class="road-item2 reveal" data-d="4"><div><h3>Multi-location forecasting</h3><p>Per-warehouse and per-store demand forecasts.</p></div><span class="road-item2__state road-item2__state--next">Next</span></div>
-      <div class="road-item2 reveal" data-d="1"><div><h3>POS &amp; ERP integrations</h3><p>Direct connections to common retail systems.</p></div><span class="road-item2__state road-item2__state--next">Planned</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--soft" id="team">
-  <div class="container">
-    <div class="section-head section-head--center reveal">
-      <span class="eyebrow">Team</span>
-      <h2 class="h2">Real people building Demandra</h2>
-      <p class="lead" style="margin-inline:auto">A small team of engineers and retail-ops specialists.</p>
-    </div>
-    <div class="team-row8">
-      <div class="member-card3 reveal" data-d="1">
-        <div class="member-card3__ph">FB</div>
-        <h3>Folake Bankole</h3>
-        <div class="role">Founder &amp; CEO</div>
-        <p>Leads Demandra's mission to help retailers stop guessing and start forecasting demand.</p>
-        <div class="member-card3__socials">
-          <a href="#" class="li" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.3H4.8V19h2.3V9.3zM5.95 5.4a1.35 1.35 0 10-.05 2.7 1.35 1.35 0 00.05-2.7zM19.2 19h-2.3v-4.7c0-1.2-.43-1.98-1.5-1.98-.82 0-1.3.55-1.52 1.08-.08.19-.1.45-.1.72V19h-2.3s.03-8.02 0-8.85h2.3v1.25c.3-.47.85-1.14 2.08-1.14 1.52 0 2.66.99 2.66 3.13V19z"/></svg></a>
-          <a href="#" class="li" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3h3l-7 8 8 10h-6l-5-6-5 6H3l7.5-9L3 3h6l4.5 5.5z"/></svg></a>
-          <a href="mailto:folake@demandra.io" class="li" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
+          <!-- Creative, Bespoke Continental Scale & Origin Capsule -->
+          <div class="hero-expansion-capsule">
+            <div class="capsule-segment capsule-origin">
+              <span class="capsule-label">BUILT IN LAGOS, NIGERIA</span>
+            </div>
+            <span class="capsule-divider"></span>
+            <div class="capsule-segment capsule-corridor">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent-lime)" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <span>EXPANDING PAN-AFRICA</span>
+            </div>
+            <span class="capsule-divider"></span>
+            <div class="capsule-segment capsule-metric">
+              <span class="capsule-num">2,400+</span>
+              <span>DOORS &amp; DEPOTS CONNECTED</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="member-card3 reveal" data-d="2">
-        <div class="member-card3__ph">CI</div>
-        <h3>Chukwuemeka Ibe</h3>
-        <div class="role">Co-founder &amp; CTO</div>
-        <p>Leads Demandra's forecasting models, data pipeline, and cloud infrastructure.</p>
-        <div class="member-card3__socials">
-          <a href="mailto:chukwuemeka@demandra.io" class="li" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
+    </section>
+
+    <!-- ============================ 3. SECTION 1: THE RETAIL BLINDSPOT (Before vs After Imagery) ============================ -->
+    <section class="section-blindspot reveal-fade" id="blindspot">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="mono-tag">01 // THE RETAIL BLIND SPOT</div>
+          <h2>The shelf tells you after the problem has happened.</h2>
+          <p>
+            A commercial supermarket can appear completely stocked on Monday morning and suffer crippling stockouts on high-margin household items by Friday evening. Demandra reads the depletion pattern earlier.
+          </p>
+        </div>
+
+        <!-- Dual Photographic Comparison Showcase -->
+        <div class="blindspot-comparison-grid">
+          <!-- Card 1: The Blindspot (Depletion Risk) -->
+          <article class="blindspot-card">
+            <div class="blindspot-photo-frame">
+              <img src="assets/img/problem-shelves.jpg" alt="Nigerian supermarket inventory manager standing before depleted, bare retail shelves" />
+              <div class="blindspot-status-badge badge-risk">
+                <span>⚠️ CRITICAL DEPLETION DETECTED</span>
+              </div>
+              <div class="blindspot-floating-alert">
+                <span>Lekki Superstore · Household Staples</span>
+                <strong>Stockout in 18 Hours</strong>
+              </div>
+            </div>
+            <div class="blindspot-body">
+              <div class="blindspot-meta-step">[STATE 01 // CRITICAL DEPLETION RISK]</div>
+              <h3>Fast-Moving Household Staples Run Dry Mid-Weekend</h3>
+              <p>
+                Legacy ERP spreadsheets and consolidated chain averages fail to detect neighbourhood-level consumption surges until cashiers turn away frustrated shoppers.
+              </p>
+              <div class="card-stats-duo">
+                <div class="card-stat-box">
+                  <div class="card-stat-num card-stat-num-danger">68%</div>
+                  <div class="card-stat-lbl">of store stockouts hit the top 20% highest-velocity goods.</div>
+                </div>
+                <div class="card-stat-box">
+                  <div class="card-stat-num card-stat-num-danger">₦4.2M</div>
+                  <div class="card-stat-lbl">average weekend revenue lost per store from late reorders.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Autonomous Replenishment (Demandra Solution) -->
+          <article class="blindspot-card">
+            <div class="blindspot-photo-frame">
+              <img src="assets/img/replenished-aisle.jpg" alt="Nigerian retail merchandising supervisor standing proudly beside fully-stocked, perfectly organized supermarket aisles" />
+              <div class="blindspot-status-badge badge-synchronized">
+                <span>✓ AUTONOMOUS REPLENISHMENT ACTIVE</span>
+              </div>
+              <div class="blindspot-floating-alert">
+                <span>Ikeja Depot → Lekki Store</span>
+                <strong>120 Cases Pre-Dispatched</strong>
+              </div>
+            </div>
+            <div class="blindspot-body">
+              <div class="blindspot-meta-step">[STATE 02 // PREDICTIVE REPLENISHMENT]</div>
+              <h3>Continuous Depletion Forecasting 14 Days Ahead</h3>
+              <p>
+                Demandra models register sales velocity against local payday timing and distributor transit schedules, dispatching the exact replenishment volume before shelves thin out.
+              </p>
+              <div class="card-stats-duo">
+                <div class="card-stat-box">
+                  <div class="card-stat-num">99.2%</div>
+                  <div class="card-stat-lbl">on-shelf product availability maintained across store clusters.</div>
+                </div>
+                <div class="card-stat-box">
+                  <div class="card-stat-num">14 Days</div>
+                  <div class="card-stat-lbl">rolling predictive lead-time buffer between checkout and depot.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. SECTION 2: RETAIL VALUE CHAIN (Iconic Pipeline View) ============================ -->
+    <section class="section-value-chain reveal-up" id="value-chain">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="mono-tag">02 // END-TO-END RETAIL FLOW</div>
+          <h2>Explore how Demandra synchronizes the entire value chain.</h2>
+          <p>
+            From FMCG manufacturing warehouses to neighbourhood supermarket checkouts — a single connected intelligence model replacing fragmented ERP spreadsheets.
+          </p>
+        </div>
+
+        <div class="chain-flow-grid">
+          <!-- Node 1: FMCG Supply & Warehouse -->
+          <div class="chain-node-card">
+            <div class="chain-photo-wrap">
+              <img src="assets/img/warehouse-logistics.jpg" alt="Nigerian FMCG logistics supervisor managing inventory in high-density pallet warehouse in Lagos" />
+              <span class="chain-stage-pill">STAGE 01 · FMCG DEPOT</span>
+            </div>
+            <div class="chain-body">
+              <h4>FMCG Inbound &amp; Depots</h4>
+              <p>Manufacturers and wholesale distributors balance buffer stocks using multi-echelon lead time analytics.</p>
+              <div class="chain-telemetry-chip">
+                <span class="indicator"></span>
+                <span>Supplier Lead Time: 4.2 Days</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node 2: Central Fleet Cross-Dock -->
+          <div class="chain-node-card">
+            <div class="chain-photo-wrap">
+              <img src="assets/img/retail-dispatch.jpg" alt="Logistics delivery vehicles and dispatch coordination in Lagos distribution hub" />
+              <span class="chain-stage-pill">STAGE 02 · FLEET DISPATCH</span>
+            </div>
+            <div class="chain-body">
+              <h4>Cross-Dock Fleet Dispatch</h4>
+              <p>Automated transfer orders group shipments by cluster route, minimizing empty truck mileage.</p>
+              <div class="chain-telemetry-chip">
+                <span class="indicator"></span>
+                <span>840 Cases Cross-Docked Today</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node 3: Supermarket Floor & Gondolas -->
+          <div class="chain-node-card">
+            <div class="chain-photo-wrap">
+              <img src="assets/img/replenished-aisle.jpg" alt="Organized supermarket grocery aisle in Lagos commercial retail center" />
+              <span class="chain-stage-pill">STAGE 03 · RETAIL FLOOR</span>
+            </div>
+            <div class="chain-body">
+              <h4>Gondola Shelf Health</h4>
+              <p>Store managers receive guided pack-out instructions prioritizing items nearing critical stockout limits.</p>
+              <div class="chain-telemetry-chip">
+                <span class="indicator"></span>
+                <span>Inter-Store Rebalance Active</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node 4: Checkout POS Velocity -->
+          <div class="chain-node-card">
+            <div class="chain-photo-wrap">
+              <img src="assets/img/retail-checkout.jpg" alt="Nigerian cashier scanning FMCG packaged goods at modern supermarket checkout counter in Lagos" />
+              <span class="chain-stage-pill">STAGE 04 · CHECKOUT POS</span>
+            </div>
+            <div class="chain-body">
+              <h4>Checkout POS Velocity</h4>
+              <p>Real-time transaction signals feed back into the central demand graph with sub-second latency.</p>
+              <div class="chain-telemetry-chip">
+                <span class="indicator"></span>
+                <span>142 Barcodes Scanned / Min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. SECTION 3: THE DECISION SCENE (Dynamic UI) ============================ -->
+    <section class="section-decision-scene reveal-fade" id="decision-scene">
+      <div class="container">
+        <div class="decision-theater-box">
+          <!-- Left Interactive Controls -->
+          <div class="decision-copy-side">
+            <div class="mono-tag">03 // DECISION INTELLIGENCE</div>
+            <h3>From “we might run out” to “move it now.”</h3>
+            <p>
+              One store has more stock than its weekly baseline requires. Another is heading toward a weekend shortage. Demandra surfaces the exact imbalance and triggers the corrective transfer.
+            </p>
+
+            <div class="param-chips-grid">
+              <button type="button" class="param-chip is-active" data-param="demand">Store Demand Surges</button>
+              <button type="button" class="param-chip" data-param="velocity">Checkout Velocity</button>
+              <button type="button" class="param-chip" data-param="leadtime">Supplier Lead Times</button>
+              <button type="button" class="param-chip" data-param="payday">Paydays &amp; Holidays</button>
+            </div>
+
+            <div style="font-size: 0.875rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Click any parameter or shelf bay to trigger dynamic store rebalancing.</span>
+            </div>
+          </div>
+
+          <!-- Right Shelf Simulation Gondola -->
+          <div class="gondola-display-stage">
+            <div class="gondola-shelves-grid">
+              <!-- Bay 1: Cooking Oil -->
+              <div class="shelf-bay-card is-active" data-bay="0">
+                <div class="shelf-bay-meta">
+                  <span class="shelf-sku-name">Gino Cooking Oil (5L)</span>
+                  <span class="shelf-stock-pill pill-low" id="pillBay0">CRITICAL · 18%</span>
+                </div>
+                <div class="shelf-level-visual">
+                  <div class="shelf-fill-bar is-critical" id="barBay0" style="width: 18%;"></div>
+                </div>
+                <div class="shelf-depletion-rate" id="rateBay0">Depletion rate: 14 units/hr ↑</div>
+              </div>
+
+              <!-- Bay 2: Peak Milk -->
+              <div class="shelf-bay-card" data-bay="1">
+                <div class="shelf-bay-meta">
+                  <span class="shelf-sku-name">Peak Evaporated Milk</span>
+                  <span class="shelf-stock-pill pill-ok" id="pillBay1">OPTIMAL · 76%</span>
+                </div>
+                <div class="shelf-level-visual">
+                  <div class="shelf-fill-bar" id="barBay1" style="width: 76%;"></div>
+                </div>
+                <div class="shelf-depletion-rate" id="rateBay1">Depletion rate: 8 units/hr →</div>
+              </div>
+
+              <!-- Bay 3: Indomie Noodles -->
+              <div class="shelf-bay-card" data-bay="2">
+                <div class="shelf-bay-meta">
+                  <span class="shelf-sku-name">Indomie Onion Chicken</span>
+                  <span class="shelf-stock-pill pill-low" id="pillBay2">SURGE · 24%</span>
+                </div>
+                <div class="shelf-level-visual">
+                  <div class="shelf-fill-bar is-critical" id="barBay2" style="width: 24%;"></div>
+                </div>
+                <div class="shelf-depletion-rate" id="rateBay2">Depletion rate: 32 cartons/hr ↑</div>
+              </div>
+
+              <!-- Bay 4: Golden Morn -->
+              <div class="shelf-bay-card" data-bay="3">
+                <div class="shelf-bay-meta">
+                  <span class="shelf-sku-name">Nestlé Golden Morn (1kg)</span>
+                  <span class="shelf-stock-pill pill-ok" id="pillBay3">STABLE · 65%</span>
+                </div>
+                <div class="shelf-level-visual">
+                  <div class="shelf-fill-bar" id="barBay3" style="width: 65%;"></div>
+                </div>
+                <div class="shelf-depletion-rate" id="rateBay3">Depletion rate: 6 units/hr →</div>
+              </div>
+            </div>
+
+            <!-- Floating AI Dispatch Order Card -->
+            <div class="floating-dispatch-order" id="dispatchCard">
+              <div class="dispatch-info">
+                <strong id="dispatchTitle">Transfer Recommendation #TR-9042</strong>
+                <span id="dispatchSubtitle">Move 80 Cases from Surulere Hub → Lekki Store #04</span>
+              </div>
+              <div class="dispatch-action-badge" id="dispatchBadge">EXECUTE REBALANCE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 6. SECTION 4: THE NEURAL ENGINE (Model Transparency) ============================ -->
+    <section class="section-neural-engine reveal-up" id="neural-engine">
+      <div class="container">
+        <div class="neural-grid-layout">
+          <!-- Left Narrative & Pipeline -->
+          <div class="neural-narrative-side">
+            <div class="mono-tag mono-tag-light">04 // THE NEURAL PREDICTION ENGINE</div>
+            <h2>Demand moves before the shelf does.</h2>
+            <p>
+              POS checkout register velocity, municipal payday liquidity, festival calendars, and supplier delivery lead times synthesize into a single continuous demand trajectory.
+            </p>
+
+            <div class="neural-pipeline-list">
+              <div class="pipeline-node-item is-active" data-step="0">
+                <span class="pipeline-stage-idx">STAGE 01</span>
+                <span class="pipeline-stage-name">Demand Sensing (Continuous Checkout Velocity)</span>
+              </div>
+              <div class="pipeline-node-item" data-step="1">
+                <span class="pipeline-stage-idx">STAGE 02</span>
+                <span class="pipeline-stage-name">Pattern Neural (Payday, Seasonality &amp; Festival Waves)</span>
+              </div>
+              <div class="pipeline-node-item" data-step="2">
+                <span class="pipeline-stage-idx">STAGE 03</span>
+                <span class="pipeline-stage-name">SKU Depletion (Store-Level Consumption Curves)</span>
+              </div>
+              <div class="pipeline-node-item" data-step="3">
+                <span class="pipeline-stage-idx">STAGE 04</span>
+                <span class="pipeline-stage-name">Auto-Replenish (Depot Cross-Dock Dispatch Orders)</span>
+              </div>
+              <div class="pipeline-node-item" data-step="4">
+                <span class="pipeline-stage-idx">STAGE 05</span>
+                <span class="pipeline-stage-name">Cluster Rebalance (Inter-Store Surplus Redistribution)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Interactive SVG Neural Graph Canvas -->
+          <div class="neural-graph-stage">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="graph-axis-label">Depletion Trajectory (14-Day Horizon)</span>
+              <span class="graph-axis-label" style="color: var(--accent-neon);">● Live Model Active</span>
+            </div>
+
+            <div class="svg-wave-container">
+              <svg viewBox="0 0 600 220" preserveAspectRatio="none">
+                <!-- Grid Lines -->
+                <line x1="0" y1="40" x2="600" y2="40" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                <line x1="0" y1="110" x2="600" y2="110" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                <line x1="0" y1="180" x2="600" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+                <!-- Threshold Dotted Line -->
+                <line x1="0" y1="130" x2="600" y2="130" stroke="rgba(224, 82, 68, 0.45)" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+                <!-- Dynamic Neural Wave -->
+                <path id="wavePath" d="M0 190 C100 185 140 140 220 150 C300 160 340 70 420 85 C500 100 540 35 600 20" fill="none" stroke="var(--accent-neon)" stroke-width="3.5" stroke-linecap="round"/>
+              </svg>
+
+              <!-- Interactive Node Points -->
+              <i class="wave-pulse-node" id="nodePt1" style="top: 68%; left: 36%;" title="Velocity Surge Detected"></i>
+              <i class="wave-pulse-node" id="nodePt2" style="top: 38%; left: 70%;" title="Neural Threshold Triggered"></i>
+              <i class="wave-pulse-node" id="nodePt3" style="top: 10%; left: 96%;" title="Replenishment Dispatched"></i>
+            </div>
+
+            <!-- Dynamic Forecast Live Callout -->
+            <div class="neural-forecast-callout" id="forecastCallout">
+              <strong id="fcTitle">AI Velocity Anomaly Detected</strong>
+              <span id="fcDesc">Checkout velocity accelerating 240% above Friday evening baseline. Automated dispatch triggered from Ikeja Depot to maintain shelf availability.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 7. SECTION 5: SCALE PROOF (Billion Dollar Backbone) ============================ -->
+    <section class="section-scale-proof reveal-fade" id="scale-network">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="mono-tag">05 // SCALE &amp; NETWORK COVERAGE</div>
+          <h2>One synchronized view across 2,400+ doors.</h2>
+          <p>
+            Demandra synchronizes high-volume supermarket checkouts across municipal retail clusters, modeling millions of live transactions daily.
+          </p>
+        </div>
+
+        <!-- 3 Metric Cells -->
+        <div class="scale-metrics-grid">
+          <div class="scale-metric-cell">
+            <div class="scale-giant-number">12.4M</div>
+            <div class="scale-caption">daily SKU demand signals scored across multi-store commercial checkouts and FMCG wholesale depots.</div>
+          </div>
+          <div class="scale-metric-cell">
+            <div class="scale-giant-number">2,400+</div>
+            <div class="scale-caption">active retail doors, supermarkets, and wholesale distribution hubs modeled in Nigeria and West Africa.</div>
+          </div>
+          <div class="scale-metric-cell">
+            <div class="scale-giant-number">99.4%</div>
+            <div class="scale-caption">fulfillment order accuracy on autonomous replenishment dispatches across regional store networks.</div>
+          </div>
+        </div>
+
+        <!-- Continental Expansion Corridor Box -->
+        <div class="expansion-corridor-box">
+          <div class="corridor-copy">
+            <div class="mono-tag">PAN-AFRICA EXPANSION CORRIDORS</div>
+            <h3>Built for the way African retail actually moves.</h3>
+            <p>
+              Begin with Nigerian commercial retail hubs in Lagos, Abuja, and Port Harcourt. Expand the predictive intelligence layer across West and East Africa, then directly into European retail trade corridors.
+            </p>
+            <a class="btn-primary" href="about.html" style="margin-top: 12px;">
+              Explore Regional Roadmap
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="corridor-map-visual">
+            <svg class="corridor-route-svg" viewBox="0 0 500 240" fill="none">
+              <!-- Animated dashed route lines connecting hubs -->
+              <path d="M120 140 C180 100 240 160 300 90 C360 40 420 80 460 50" stroke="var(--accent-forest)" stroke-width="3" stroke-dasharray="6 6"/>
+              <path d="M220 200 C270 170 310 180 370 130" stroke="var(--accent-emerald)" stroke-width="2.5" stroke-dasharray="5 5"/>
+
+              <!-- Pulse dots on map -->
+              <circle cx="120" cy="140" r="7" fill="var(--accent-neon)"/>
+              <circle cx="300" cy="90" r="6" fill="var(--accent-forest)"/>
+              <circle cx="460" cy="50" r="5" fill="var(--accent-emerald)"/>
+            </svg>
+
+            <!-- Location Pills -->
+            <div class="route-node-pill node-lagos">Lagos · Nigeria Core Hub</div>
+            <div class="route-node-pill node-accra">Accra · Regional Expansion Hub</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 8. SECTION 6: EXECUTIVE LEADERSHIP (100% Authentic Nigerian Team) ============================ -->
+    <section class="section-team reveal-fade" id="team">
+      <div class="container">
+        <div class="section-head-center">
+          <div class="mono-tag">06 // EXECUTIVE LEADERSHIP</div>
+          <h2>Built by Nigerians who know the problem firsthand.</h2>
+          <p>
+            Former FMCG supply chain executives, retail operations directors, and machine learning researchers who have managed Nigerian supermarket logistics from the warehouse floor to the cash register.
+          </p>
+        </div>
+
+        <div class="team-grid-triad">
+          <!-- Person 1: Folarin Adeyemi (CEO) -->
+          <article class="team-portrait-card reveal-left delay-100">
+            <div class="portrait-photo-container">
+              <img src="assets/img/team-folarin.jpg" alt="Folarin Adeyemi, Co-founder and CEO of Demandra" />
+              <div class="portrait-nationality-pill">CO-FOUNDER &amp; CEO · NIGERIAN</div>
+            </div>
+            <div class="portrait-details-box">
+              <strong>Folarin Adeyemi</strong>
+              <span class="portrait-role">12+ Years FMCG Distribution Leadership</span>
+              <p class="portrait-bio">Former regional supply chain director managing ₦38B in annual food and beverage distribution across Nigeria, Ghana, and Côte d'Ivoire.</p>
+              
+              <!-- LinkedIn & Email Icons -->
+              <div class="team-social-row">
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-social-link" aria-label="LinkedIn profile of Folarin Adeyemi">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="mailto:folarin@demandra.ai" class="team-social-link" aria-label="Email Folarin Adeyemi">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Person 2: Dr. Amina Bello (CTO) -->
+          <article class="team-portrait-card reveal-up delay-200">
+            <div class="portrait-photo-container">
+              <img src="assets/img/team-amina.jpg" alt="Dr. Amina Bello, Co-founder and CTO of Demandra" />
+              <div class="portrait-nationality-pill">CO-FOUNDER &amp; CTO · NIGERIAN</div>
+            </div>
+            <div class="portrait-details-box">
+              <strong>Dr. Amina Bello</strong>
+              <span class="portrait-role">PhD in Applied Time-Series Machine Learning</span>
+              <p class="portrait-bio">Pioneer of high-throughput retail demand forecasting architectures built on Microsoft Azure. Imperial College London &amp; ABU Zaria alumni.</p>
+              
+              <!-- LinkedIn & Email Icons -->
+              <div class="team-social-row">
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-social-link" aria-label="LinkedIn profile of Dr. Amina Bello">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="mailto:amina@demandra.ai" class="team-social-link" aria-label="Email Dr. Amina Bello">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Person 3: Chuka Okonkwo (CPO) -->
+          <article class="team-portrait-card reveal-right delay-300">
+            <div class="portrait-photo-container">
+              <img src="assets/img/team-chuka.jpg" alt="Chuka Okonkwo, Co-founder and CPO of Demandra" />
+              <div class="portrait-nationality-pill">CO-FOUNDER &amp; CPO · NIGERIAN</div>
+            </div>
+            <div class="portrait-details-box">
+              <strong>Chuka Okonkwo</strong>
+              <span class="portrait-role">Ex-Retail Operations Lead across 80+ Doors</span>
+              <p class="portrait-bio">Led merchandising operations, stock auditing, and store rollouts for prominent supermarket and pharmacy retail chains in West Africa.</p>
+              
+              <!-- LinkedIn & Email Icons -->
+              <div class="team-social-row">
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-social-link" aria-label="LinkedIn profile of Chuka Okonkwo">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="mailto:chuka@demandra.ai" class="team-social-link" aria-label="Email Chuka Okonkwo">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 9. SECTION 7: CALLOUT CONVERSION CTA ============================ -->
+    <section class="section-cta-banner reveal-up">
+      <div class="container">
+        <div class="cta-banner-theater">
+          <div>
+            <div class="mono-tag mono-tag-light">RETAIL INTELLIGENCE DEPLOYMENT</div>
+            <h2>Every store has a pattern. Demandra finds it.</h2>
+          </div>
+          <button type="button" class="btn-cta-white" data-open-modal>
+            Get Started
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ MASTER REGULATORY FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns-grid">
+        <!-- Corporate Info with Address, Phone, and Email Placed Cleanly Under Company Name -->
+        <div>
+          <div class="footer-brand-header">
+            <a href="index.html" class="nav-brand-symbol" aria-label="Demandra Home">
+        <img src="assets/img/demandra-symbol@2x.png" alt="Demandra" class="brand-symbol-img" width="36" height="36" />
+      </a>
+            <span class="footer-brand-title">Demandra Technologies Ltd</span>
+          </div>
+
+          <!-- CAC / Registration -->
+          <div class="footer-corp-meta">
+            <span class="footer-registration-pill">RC 1928410 · INCORPORATED IN NIGERIA</span>
+          </div>
+
+          <!-- ADDRESS AND PHONE PLACED DIRECTLY UNDER COMPANY NAME -->
+          <div class="footer-contact-details">
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Plot 8, Admiralty Way, Lekki Phase 1, Lagos, Nigeria</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+234 1 888 3490</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>hello@demandra.ai</span>
+            </div>
+          </div>
+
+          <p class="footer-mission">
+            Enterprise AI demand prediction and autonomous replenishment platform for commercial multi-store retail networks. Built in Nigeria, expanding across Africa.
+          </p>
+        </div>
+
+        <!-- Product Group -->
+        <div>
+          <h4 class="footer-col-head">Product</h4>
+          <ul class="footer-links-list">
+            <li><a href="solution.html">Demand Planning</a></li>
+            <li><a href="#neural-engine">Neural Forecasting</a></li>
+            <li><a href="solution.html#replenishment">Auto-Replenishment</a></li>
+            <li><a href="pricing.html">Capacity &amp; Store Tiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Group -->
+        <div>
+          <h4 class="footer-col-head">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Demandra</a></li>
+            <li><a href="#blindspot">The Retail Blindspot</a></li>
+            <li><a href="#team">Founding Team</a></li>
+            <li><a href="security.html">Security &amp; Azure ML</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Group -->
+        <div>
+          <h4 class="footer-col-head">Legal &amp; Compliance</h4>
+          <ul class="footer-links-list">
+            <li><a href="privacy.html">Privacy Notice</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="legal.html">Master SaaS Agreement</a></li>
+            <li><a href="security.html#compliance">NDPR &amp; SOC 2</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          © 2026 Demandra Technologies Ltd. All rights reserved. Registered with CAC Nigeria.
+        </div>
+        <div class="footer-bottom-links">
+          <div class="footer-social-icons">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Demandra on LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v7.6H9.2v-7.6H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Demandra on Facebook" title="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95Z"/></svg>
+            </a>
+          </div>
+          <span class="footer-legal-sep">·</span>
+          <a href="privacy.html" class="footer-legal-link">Privacy Notice</a>
+          <span class="footer-legal-sep">·</span>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================ ENTERPRISE SIGNUP MODAL (RULE 3) ============================ -->
+  <div class="modal-backdrop" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalHeading">Get Started with Demandra</h3>
+          <p style="font-size: 0.78125rem; color: var(--text-muted); margin-top: 0.2rem;">Enterprise Retail Demand Intelligence Platform</p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Form View -->
+        <div id="modalFormView">
+          <div class="sso-group">
+            <button type="button" class="btn-sso" id="btnSsoEntra">
+              <svg viewBox="0 0 21 21" fill="none">
+                <path fill="#f25022" d="M1 1h9v9H1z"/>
+                <path fill="#00a4ef" d="M1 11h9v9H1z"/>
+                <path fill="#7fba00" d="M11 1h9v9h-9z"/>
+                <path fill="#ffb900" d="M11 11h9v9h-9z"/>
+              </svg>
+              Continue with Microsoft Entra ID
+            </button>
+            <button type="button" class="btn-sso" id="btnSsoGoogle">
+              <svg viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 01-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/>
+                <path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1.1-3.8 1.1-2.9 0-5.3-2-6.2-4.6H2.2v2.8A11 11 0 0012 23z"/>
+                <path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 010-4.2V7.1H2.2a11 11 0 000 9.8z"/>
+                <path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 002.2 7.1l3.6 2.8C6.7 7.3 9.1 5.4 12 5.4z"/>
+              </svg>
+              Continue with Google Workspace
+            </button>
+          </div>
+
+          <div class="sso-separator">
+            <span>OR CORPORATE WORK EMAIL</span>
+          </div>
+
+          <form id="enterpriseSignupForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="modalEmail">Corporate Work Email</label>
+              <input type="email" class="form-input" id="modalEmail" placeholder="merchandising.director@retailchain.ng" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="modalNetworkSize">Retail Store Network Size</label>
+              <select class="form-select" id="modalNetworkSize" required>
+                <option value="" disabled selected>Select operating retail capacity...</option>
+                <option value="5-20">5 – 20 Stores (Regional Chain)</option>
+                <option value="21-50">21 – 50 Stores (Commercial Retailer)</option>
+                <option value="50+">50+ Stores / FMCG Wholesale Distributor</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="modalPassword">Workspace Password</label>
+              <div class="password-input-wrap">
+                <input type="password" class="form-input" id="modalPassword" placeholder="Minimum 8 characters" required />
+                <button type="button" class="password-toggle-btn" id="passwordToggle" aria-label="Toggle password visibility">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+              <div class="strength-meter-wrap" id="strengthMeter">
+                <div class="strength-meter-bars">
+                  <div class="strength-segment" id="sSeg1"></div>
+                  <div class="strength-segment" id="sSeg2"></div>
+                  <div class="strength-segment" id="sSeg3"></div>
+                  <div class="strength-segment" id="sSeg4"></div>
+                </div>
+                <div class="strength-label">
+                  <span id="strengthText">Password security rating</span>
+                  <span>Min 8 chars</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; line-height: 1.4;">
+              By continuing, you agree to Demandra's <a href="terms.html" style="color: var(--accent-emerald); text-decoration: underline;">Terms of Service</a> and <a href="privacy.html" style="color: var(--accent-emerald); text-decoration: underline;">Privacy Policy</a>.
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+              Get Started
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- 3-Step Provisioning View -->
+        <div class="provisioning-view" id="modalProvView">
+          <div class="provisioning-spinner"></div>
+          <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);">Provisioning Azure ML Sandbox...</h4>
+          <p style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 4px;" id="provStatusMsg">
+            Configuring dedicated demand forecasting tenant for your store network.
+          </p>
+          <div class="provisioning-steps">
+            <div class="prov-step-item" id="provStep1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>1. Validating Microsoft Entra ID / Corporate Credentials</span>
+            </div>
+            <div class="prov-step-item" id="provStep2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>2. Allocating Isolated Azure West Africa Tenant DB</span>
+            </div>
+            <div class="prov-step-item" id="provStep3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>3. Initializing Demandra Retail Neural Model</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<section class="section" id="demo">
-  <div class="container">
-    <div class="cta-chart reveal">
-      <div>
-        <span class="eyebrow">Get started</span>
-        <h2 class="h2" style="margin-top:14px">See Demandra forecast your own catalog in 20 minutes</h2>
-        <p class="lead">Book a walkthrough — no commitment. We'll forecast a sample SKU live.</p>
-        <form class="cta-chart__form" id="demoForm" novalidate>
-          <input id="email" type="email" placeholder="you@company.com" required />
-          <button type="submit" class="btn btn--rust btn--block">Get started</button>
-        </form>
-        <p class="cta-chart__note">By submitting you agree to our <a href="privacy.html" style="color:var(--teal-700)">Privacy Policy</a>. We never sell your data.</p>
-      </div>
-      <div class="cta-chart__preview">
-        <svg viewBox="0 0 400 180" preserveAspectRatio="none">
-          <path d="M0,140 C40,130 70,145 110,120 C150,100 180,130 220,95 L260,80" fill="none" stroke="#B5502E" stroke-width="3" stroke-linecap="round"/>
-          <path d="M260,80 C300,60 330,70 400,30" fill="none" stroke="#F4C7A6" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
-          <circle cx="260" cy="80" r="5" fill="#fff"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer__stats">
-    <div><b><span class="count" data-to="8">0</span></b><span>organizations live</span></div>
-    <div><b><span class="count" data-to="41">0</span>k+</b><span>SKUs forecast</span></div>
-    <div><b><span class="count" data-to="87">0</span>%</b><span>forecast accuracy</span></div>
-  </div>
-  <div class="container">
-    <div class="footer__top">
-      <div>
-        <a href="index.html" class="brand">
-          <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Demandra logo"></span><span style="background:#B5502E"></span></span>
-          Demandra
-        </a>
-        <p class="footer__about">AI demand forecasting — know what sells before it runs out.</p>
-      </div>
-      <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#how">How it works</a></li><li><a href="#ai">AI technology</a></li><li><a href="#roadmap">Roadmap</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="#team">Team</a></li><li><a href="#market">Market</a></li><li><a href="#demo">Get started</a></li><li><a href="login.html">Log in</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li><li><a href="privacy.html#data">Data protection</a></li><li><a href="#demo">Contact</a></li></ul></div>
-    </div>
-    <p class="footer__disclaimer">Demandra helps teams forecast demand and plan inventory. It does not guarantee sales outcomes, and reorder suggestions should always be reviewed by your team before ordering.</p>
-    <div class="footer__bottom">
-      <span>© 2026 Demandra Labs Ltd. All rights reserved.</span>
-      <div class="footer__socials">
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.3H4.8V19h2.3V9.3zM5.95 5.4a1.35 1.35 0 10-.05 2.7 1.35 1.35 0 00.05-2.7zM19.2 19h-2.3v-4.7c0-1.2-.43-1.98-1.5-1.98-.82 0-1.3.55-1.52 1.08-.08.19-.1.45-.1.72V19h-2.3s.03-8.02 0-8.85h2.3v1.25c.3-.47.85-1.14 2.08-1.14 1.52 0 2.66.99 2.66 3.13V19z"/></svg></a>
-        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3h3l-7 8 8 10h-6l-5-6-5 6H3l7.5-9L3 3h6l4.5 5.5z"/></svg></a>
-        <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/app.js?v=1"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>

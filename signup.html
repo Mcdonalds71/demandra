@@ -1,62 +1,219 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Create your account — Demandra</title>
-<meta name="description" content="Create your Demandra workspace and start forecasting demand with AI." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:wght@500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css?v=1" />
-<link rel="icon" type="image/png" href="assets/logo-mark.png?v=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Started with Demandra — Retail Demand Intelligence</title>
+  <meta name="description" content="Provision your enterprise Demandra retail workspace and forecast store replenishment with AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo-mark.png">
 </head>
-<body>
-<div class="auth">
-  <aside class="auth__aside">
-    <a href="index.html" class="brand" style="color:#fff">
-      <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Demandra logo"></span><span style="background:#FBE7DD"></span></span>
-      Demandra
-    </a>
-    <div>
-      <span class="pill" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.85);display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;font-size:.82rem;font-weight:700"><i style="width:7px;height:7px;border-radius:50%;background:#B5502E;display:inline-block"></i> Live MVP — early-access pricing</span>
-      <p class="auth__quote" style="margin-top:20px">Connect your sales data and see your first forecast today.</p>
-      <ul class="auth__points">
-        <li><span class="ic"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Free plan available</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> No credit card required</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Data-protection ready by design</li>
-      </ul>
-    </div>
-    <p style="font-size:.8rem;color:rgba(255,255,255,.45)">© 2026 Demandra Labs Ltd</p>
-  </aside>
-  <main class="auth__main">
-    <div class="auth__card">
-      <a href="index.html" class="auth__back"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to site</a>
-      <h1>Create your account</h1>
-      <p class="sub">Start your Demandra workspace today.</p>
-      <div class="oauth">
-        <button type="button">
-          <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 01-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1.1-3.8 1.1-2.9 0-5.3-2-6.2-4.6H2.2v2.8A11 11 0 0012 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 010-4.2V7.1H2.2a11 11 0 000 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 002.2 7.1l3.6 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
-          Sign up with Google
-        </button>
-      </div>
-      <div class="divider">or with email</div>
-      <form id="signupForm" novalidate>
-        <div class="field"><label for="fullname">Full name</label><input id="fullname" type="text" placeholder="Jane Doe" required /></div>
-        <div class="field"><label for="org">Company or organization</label><input id="org" type="text" placeholder="Your company or organization" required /></div>
-        <div class="field"><label for="email">Work email</label><input id="email" type="email" placeholder="you@company.com" required /></div>
-        <div class="field">
-          <label for="password">Password</label>
-          <input id="password" type="password" placeholder="At least 8 characters" required />
-          <div class="strength"><i id="strengthBar"></i></div>
+<body style="background: var(--bg-ivory);">
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <div class="auth-page-wrap" id="mainContent">
+    <!-- Aside Dark Panel -->
+    <aside class="auth-panel-aside">
+      <div>
+        <a href="index.html" class="brand" style="color: #FFFFFF;" aria-label="Demandra Home">
+          <div class="brand-symbol">
+            <img src="assets/img/demandra-symbol@2x.png" alt="Demandra" width="36" height="36" style="object-fit: contain; display: block;" />
+          </div>
+          <div class="brand-text-wrap">
+            <span class="brand-title">Demandra</span>
+            <span class="brand-sub">RETAIL INTELLIGENCE</span>
+          </div>
+        </a>
+
+        <div style="margin-top: 4rem;">
+          <div class="eyebrow-tag" style="background: rgba(221, 230, 184, 0.15); color: var(--accent-lime); border-color: rgba(221, 230, 184, 0.25);">
+            ENTERPRISE PROVISIONING
+          </div>
+          <p style="font-size: 1.25rem; font-weight: 500; line-height: 1.5; color: var(--text-on-dark); margin: 1.5rem 0;">
+            "Connecting our Lagos checkout feeds took under 48 hours. By week two, we had eliminated stockouts across our top 50 revenue SKUs."
+          </p>
+          <div style="font-size: 0.875rem; color: var(--text-on-dark-muted);">
+            — Supply Chain Director, Supermarket Network, Victoria Island
+          </div>
+
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-top: 2.5rem; font-size: 0.875rem; color: var(--text-on-dark-muted);">
+            <li style="display: flex; align-items: center; gap: 0.625rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-lime)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Instant Azure retail sandbox provisioning</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 0.625rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-lime)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Pre-built Odoo, Dynamics &amp; CSV adapters</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 0.625rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-lime)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dedicated Customer-Managed Key (CMK) isolation</span>
+            </li>
+          </ul>
         </div>
-        <label class="checkbox" style="margin-top:14px"><input type="checkbox" required /> I agree to the <a href="terms.html" style="color:var(--rust-600);font-weight:700">Terms</a> &amp; <a href="privacy.html" style="color:var(--rust-600);font-weight:700">Privacy Policy</a>.</label>
-        <button type="submit" data-label="Create account" class="btn btn--rust btn--block btn--lg" style="margin-top:18px">Create account</button>
-      </form>
-      <p class="auth__foot">Already have an account? <a href="login.html">Log in</a></p>
-    </div>
-  </main>
-</div>
-<script src="assets/app.js?v=1"></script>
+      </div>
+
+      <div style="font-size: 0.78125rem; color: var(--text-on-dark-muted);">
+        &copy; 2026 Demandra Technologies Ltd &middot; RC 1928410 &middot; Lekki Phase 1, Lagos
+      </div>
+    </aside>
+
+    <!-- Main Form Panel -->
+    <main class="auth-panel-main">
+      <div class="auth-box">
+        <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.8125rem; color: var(--text-ink-muted); margin-bottom: 1.5rem; font-weight: 600;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          Back to main site
+        </a>
+
+        <h1 style="font-size: 1.75rem; font-weight: 700; color: var(--text-ink); letter-spacing: -0.025em; margin-bottom: 0.35rem;">
+          Get Started with Demandra
+        </h1>
+        <p style="font-size: 0.875rem; color: var(--text-ink-muted); margin-bottom: 1.5rem;">
+          Provision your retail workspace and connect your checkout feeds.
+        </p>
+
+        <!-- SSO -->
+        <div class="sso-group">
+          <button type="button" class="btn-sso">
+            <svg viewBox="0 0 21 21" fill="none">
+              <path fill="#f25022" d="M1 1h9v9H1z"/>
+              <path fill="#00a4ef" d="M1 11h9v9H1z"/>
+              <path fill="#7fba00" d="M11 1h9v9h-9z"/>
+              <path fill="#ffb900" d="M11 11h9v9h-9z"/>
+            </svg>
+            Continue with Microsoft Entra ID
+          </button>
+          <button type="button" class="btn-sso">
+            <svg viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 01-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/>
+              <path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1.1-3.8 1.1-2.9 0-5.3-2-6.2-4.6H2.2v2.8A11 11 0 0012 23z"/>
+              <path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 010-4.2V7.1H2.2a11 11 0 000 9.8z"/>
+              <path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 002.2 7.1l3.6 2.8C6.7 7.3 9.1 5.4 12 5.4z"/>
+            </svg>
+            Continue with Google Workspace
+          </button>
+        </div>
+
+        <div class="modal-divider">
+          <span>or register with work email</span>
+        </div>
+
+        <form class="modal-form" id="pageSignupForm" action="#" method="POST">
+          <div class="form-group">
+            <label class="form-label" for="signupName">Full Name</label>
+            <input type="text" class="form-input" id="signupName" placeholder="Tunde Balogun" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signupEmail">Corporate Work Email</label>
+            <input type="email" class="form-input" id="signupEmail" placeholder="inventory.head@retailchain.ng" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signupStoreCount">Store Network Size</label>
+            <select class="form-input" id="signupStoreCount">
+              <option value="1-5">1 – 5 Stores (Regional Pilot)</option>
+              <option value="6-20">6 – 20 Stores (Growing Chain)</option>
+              <option value="21-50" selected>21 – 50 Stores (Commercial Retailer)</option>
+              <option value="50+">50+ Stores / FMCG Wholesale Distributor</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signupPassword">Password</label>
+            <div class="password-input-wrap">
+              <input type="password" class="form-input" id="signupPassword" placeholder="Minimum 8 characters" required />
+              <button type="button" class="password-toggle-btn" id="signupPasswordToggle" aria-label="Toggle password visibility">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+            <div class="strength-meter-wrap" id="signupStrengthMeter">
+              <div class="strength-meter-bars">
+                <div class="strength-segment"></div>
+                <div class="strength-segment"></div>
+                <div class="strength-segment"></div>
+                <div class="strength-segment"></div>
+              </div>
+              <div class="strength-label">
+                <span id="signupStrengthText">Password security rating</span>
+                <span style="color: var(--text-ink-faint);">Min 8 chars</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="font-size: 0.75rem; color: var(--text-ink-muted); margin-top: 0.25rem;">
+            By clicking Get Started, you agree to Demandra's <a href="terms.html" style="color: var(--accent-leaf); text-decoration: underline;">Terms of Service</a> and <a href="privacy.html" style="color: var(--accent-leaf); text-decoration: underline;">Privacy Policy</a>.
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.75rem;">
+            Get Started
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <p style="text-align: center; font-size: 0.8125rem; color: var(--text-ink-muted); margin-top: 1.5rem;">
+          Already have an account? <a href="login.html" style="color: var(--accent-leaf); font-weight: 600;">Sign in</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Password toggle
+    const toggle = document.getElementById('signupPasswordToggle');
+    const input = document.getElementById('signupPassword');
+    if (toggle && input) {
+      toggle.addEventListener('click', () => {
+        const isPassword = input.getAttribute('type') === 'password';
+        input.setAttribute('type', isPassword ? 'text' : 'password');
+        toggle.innerHTML = isPassword
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="2" x2="23" y2="23"></line></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+      });
+    }
+
+    // 4-state password strength
+    const meterWrap = document.getElementById('signupStrengthMeter');
+    const strengthText = document.getElementById('signupStrengthText');
+    if (input && meterWrap && strengthText) {
+      input.addEventListener('input', () => {
+        const val = input.value;
+        if (!val) {
+          meterWrap.className = 'strength-meter-wrap';
+          strengthText.textContent = 'Password security rating';
+          return;
+        }
+
+        let score = 0;
+        if (val.length >= 8) score++;
+        if (/[A-Z]/.test(val)) score++;
+        if (/[0-9]/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+
+        meterWrap.className = `strength-meter-wrap strength-state-${score || 1}`;
+        const labels = ['Too short', 'Fair', 'Good', 'Strong (Enterprise ready)'];
+        strengthText.textContent = labels[Math.max(0, score - 1)];
+      });
+    }
+
+    const form = document.getElementById('pageSignupForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) {
+          btn.innerHTML = 'Provisioning retail workspace...';
+          setTimeout(() => {
+            alert('Retail workspace successfully provisioned! Check your inbox for activation credentials.');
+            window.location.href = 'index.html';
+          }, 1200);
+        }
+      });
+    }
+  </script>
 </body>
 </html>

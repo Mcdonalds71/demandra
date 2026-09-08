@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Service — Demandra</title>
-  <meta name="description" content="Terms of service governing the access and use of the Demandra retail demand intelligence platform." />
+  <title>Security, Isolation &amp; Compliance — Demandra</title>
+  <meta name="description" content="Demandra protects sensitive retail sales data with dedicated Azure Blob CMK encryption, SOC 2 alignment, and NDPR compliance." />
+  <meta name="keywords" content="retail data security, Azure CMK encryption, NDPR compliance Nigeria, POS data protection" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -59,78 +60,141 @@
   </div>
 
   <main id="mainContent">
+    <!-- Hero -->
     <section class="page-hero">
       <div class="container">
         <div class="page-hero-inner">
           <div class="breadcrumbs">
             <a href="index.html">Demandra</a>
             <span>/</span>
-            <span>Terms of Service</span>
+            <span>Security Architecture</span>
           </div>
           <h1 class="page-title">
-            Terms of Service.
+            Enterprise trust, isolation, and compliance.
           </h1>
           <p class="page-lead">
-            Effective Date: January 1, 2026. These terms govern the commercial use of Demandra's retail demand forecasting platform by corporate subscribers.
+            Retail checkout telemetry contains your most sensitive commercial margin data. Demandra isolates every tenant environment inside dedicated Microsoft Azure envelopes.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="container">
-      <div class="legal-layout">
-        <aside class="legal-nav">
-          <a href="#acceptance" class="legal-nav-link is-active">1. Acceptance</a>
-          <a href="#accounts" class="legal-nav-link">2. Accounts &amp; Security</a>
-          <a href="#usage" class="legal-nav-link">3. Acceptable Use</a>
-          <a href="#proprietary" class="legal-nav-link">4. Intellectual Property</a>
-          <a href="#termination" class="legal-nav-link">5. Termination</a>
-          <a href="#liability" class="legal-nav-link">6. Liability Limitations</a>
-        </aside>
+    <!-- Detailed Security Architecture -->
+    <section class="inner-section">
+      <div class="container">
+        <div class="detail-grid">
+          <div class="detail-content">
+            <div class="eyebrow-tag">01 // TENANT ISOLATION</div>
+            <h2>Zero cross-tenant blending. Full cryptographic separation.</h2>
+            <p>
+              Unlike generic retail analytics platforms that pool merchant transaction histories to train global recommendation models, Demandra provides complete mathematical data isolation.
+            </p>
+            <p>
+              Your basket volumes, margin profiles, and supplier pricing agreements are stored in dedicated Azure Blob storage containers encrypted with Customer-Managed Keys (CMK).
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="spec-item-name">Encryption at Rest</span>
+                <span class="spec-item-val">AES-256 with Azure Key Vault CMK</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Encryption in Transit</span>
+                <span class="spec-item-val">TLS 1.3 (Forced HSTS)</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Data Sovereignty</span>
+                <span class="spec-item-val">Azure South Africa North &amp; West Europe</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Regulatory Standards</span>
+                <span class="spec-item-val">NDPR / GDPR Aligned / SOC 2 Controls</span>
+              </li>
+            </ul>
+          </div>
+          <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 2.5rem;">
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--accent-leaf); margin-bottom: 1.5rem; text-transform: uppercase;">Security Verification Checklist</div>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.875rem;">
+              <div style="display: flex; gap: 1rem; align-items: start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-leaf)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong style="color: var(--text-ink);">Dedicated Azure ML Enclaves:</strong>
+                  <div style="color: var(--text-ink-muted);">Predictive models run in isolated memory namespaces with zero parameter bleeding.</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-leaf)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong style="color: var(--text-ink);">Microsoft Entra ID RBAC:</strong>
+                  <div style="color: var(--text-ink-muted);">Granular permission scoping so store cashiers cannot access corporate supplier contracts.</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-leaf)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong style="color: var(--text-ink);">Continuous Immutable Audit Logs:</strong>
+                  <div style="color: var(--text-ink-muted);">Every forecast override, PO trigger, and stock balance transfer is cryptographically stamped.</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-leaf)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <div>
+                  <strong style="color: var(--text-ink);">Customer PII Stripping:</strong>
+                  <div style="color: var(--text-ink-muted);">Customer credit card numbers, loyalty phone numbers, and names are stripped at the POS edge before cloud transit.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article class="legal-body">
-          <h2 id="acceptance">1. Acceptance of Terms</h2>
-          <p>
-            By accessing or using the Demandra platform, APIs, or edge agents, you agree to be bound by these Terms of Service. If you are entering into these terms on behalf of a corporate entity, supermarket chain, or distribution company, you warrant that you possess the legal authority to bind such entity.
-          </p>
+    <!-- Governance & Compliance Grid -->
+    <section class="inner-section alt-bg">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: 3rem;">
+          <div class="eyebrow-tag">REGULATORY COMPLIANCE</div>
+          <h2 class="section-headline">Governance built for commercial retail audits.</h2>
+        </div>
 
-          <h2 id="accounts">2. Corporate Accounts &amp; Access Controls</h2>
-          <p>
-            Subscribers must ensure that all authorized users maintain strong, distinct credentials. We recommend federating access through corporate Microsoft Entra ID or Google Workspace single sign-on.
-          </p>
-          <p>
-            You are solely responsible for all activities occurring under your administrative domain and for revoking credentials when store managers or merchandising staff depart your organization.
-          </p>
+        <div class="cards-triad">
+          <div class="feature-card">
+            <span class="feature-card-num">COMPLIANCE // 01</span>
+            <h3>Nigeria Data Protection (NDPR)</h3>
+            <p>Demandra is fully registered and audited under the Nigeria Data Protection Act 2023, ensuring that local merchant data meets statutory retention and governance rules.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card-num">COMPLIANCE // 02</span>
+            <h3>SOC 2 Type II Alignment</h3>
+            <p>Rigorous operational controls governing confidentiality, availability, processing integrity, and change management across our cloud deployment pipelines.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card-num">COMPLIANCE // 03</span>
+            <h3>99.9% Uptime Guarantee</h3>
+            <p>Backed by multi-zone Azure redundant compute clusters with automated failover and financial credits for verified service interruptions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="usage">3. Acceptable Use &amp; API Quotas</h2>
-          <p>
-            You agree not to reverse engineer, decompile, or disassemble any aspect of the Demandra predictive forecasting engine, or use the outputs to build a competing retail demand modeling software.
+    <!-- CTA Section -->
+    <section class="final-cta-block">
+      <div class="container">
+        <div class="final-cta-box">
+          <div class="eyebrow-tag" style="margin-bottom: 0;">ENTERPRISE DUE DILIGENCE</div>
+          <h2 class="section-headline">Request our complete security whitepaper.</h2>
+          <p class="section-lead">
+            Review our SOC 2 controls, Azure encryption blueprints, and penetration testing summaries with your Chief Information Security Officer.
           </p>
-          <p>
-            API usage must conform to rate limits specified in your tier schedule. Automated scripts exceeding reasonable batch parameters may be throttled to ensure infrastructure stability for all tenants.
-          </p>
-
-          <h2 id="proprietary">4. Intellectual Property Rights</h2>
-          <p>
-            Demandra Technologies Ltd and its licensors retain all rights, title, and interest in and to the platform, machine learning models, algorithms, documentation, and user interfaces.
-          </p>
-          <p>
-            Subscriber retains complete and unencumbered ownership of all POS sales receipts, inventory counts, store operational logs, and trade secrets submitted to the platform.
-          </p>
-
-          <h2 id="termination">5. Term &amp; Termination</h2>
-          <p>
-            Annual subscriptions renew automatically unless either party provides written notice of non-renewal at least thirty (30) days prior to the expiration of the current billing cycle.
-          </p>
-          <p>
-            Upon termination, Subscriber will have thirty (30) days to download all historical demand forecasts, reorder logs, and ingested store data in standard CSV/JSON format, after which all tenant records are securely shredded.
-          </p>
-
-          <h2 id="liability">6. Limitation of Liability</h2>
-          <p>
-            To the maximum extent permitted by applicable Nigerian law, neither party shall be liable for indirect, incidental, or consequential damages resulting from lost sales or supplier stockouts.
-          </p>
-        </article>
+          <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button type="button" class="btn-primary" data-open-modal>
+              Get Started
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="mailto:security@demandra.ai" class="btn-secondary">
+              Contact Security Desk
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -215,7 +279,7 @@
         <div class="footer-bottom-links">
           <div class="footer-social-icons">
             <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Demandra on LinkedIn" title="LinkedIn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v7.6H9.2v-7.6H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v7.6H9.2v-7.6H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z"/></svg>
             </a>
             <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Demandra on Facebook" title="Facebook">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95Z"/></svg>

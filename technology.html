@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Service — Demandra</title>
-  <meta name="description" content="Terms of service governing the access and use of the Demandra retail demand intelligence platform." />
+  <title>Technology &amp; Azure Cloud Architecture — Demandra</title>
+  <meta name="description" content="Explore Demandra's enterprise demand prediction architecture: Azure Machine Learning, Blob CMK encryption, Event Hubs ingestion, and offline-first POS sync." />
+  <meta name="keywords" content="Azure Machine Learning retail, demand forecasting architecture, POS stream ingestion, retail tech Africa" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -25,7 +26,7 @@
         <nav class="nav-menu" aria-label="Primary Navigation">
           <a href="solution.html" class="nav-item-link">Planning</a>
           <a href="index.html#aisle-simulator" class="nav-item-link">Demand Intelligence</a>
-          <a href="technology.html" class="nav-item-link">Retail Operations</a>
+          <a href="technology.html" class="nav-item-link is-current" aria-current="page">Retail Operations</a>
           <a href="about.html" class="nav-item-link">Company</a>
         </nav>
 
@@ -59,78 +60,177 @@
   </div>
 
   <main id="mainContent">
+    <!-- Hero -->
     <section class="page-hero">
       <div class="container">
         <div class="page-hero-inner">
           <div class="breadcrumbs">
             <a href="index.html">Demandra</a>
             <span>/</span>
-            <span>Terms of Service</span>
+            <span>Technology &amp; Architecture</span>
           </div>
           <h1 class="page-title">
-            Terms of Service.
+            Enterprise cloud architecture built on Microsoft Azure.
           </h1>
           <p class="page-lead">
-            Effective Date: January 1, 2026. These terms govern the commercial use of Demandra's retail demand forecasting platform by corporate subscribers.
+            Demandra couples real-time POS event streaming with Azure Machine Learning time-series neural networks — delivering bank-grade encryption and offline-first store edge durability.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="container">
-      <div class="legal-layout">
-        <aside class="legal-nav">
-          <a href="#acceptance" class="legal-nav-link is-active">1. Acceptance</a>
-          <a href="#accounts" class="legal-nav-link">2. Accounts &amp; Security</a>
-          <a href="#usage" class="legal-nav-link">3. Acceptable Use</a>
-          <a href="#proprietary" class="legal-nav-link">4. Intellectual Property</a>
-          <a href="#termination" class="legal-nav-link">5. Termination</a>
-          <a href="#liability" class="legal-nav-link">6. Liability Limitations</a>
-        </aside>
+    <!-- Architecture Layers Deep Dive -->
+    <section class="inner-section">
+      <div class="container">
+        <div class="detail-grid">
+          <div class="detail-content">
+            <div class="eyebrow-tag">DATA PIPELINE ARCHITECTURE</div>
+            <h2>From cash register swipe to predictive replenishment dispatch.</h2>
+            <p>
+              Retail forecasting fails when systems run on day-old batch uploads. Demandra operates an event-driven ingestion engine capable of processing millions of SKU transactions across thousands of checkout terminals simultaneously.
+            </p>
+            <p>
+              Each receipt transaction is encrypted with TLS 1.3 at the store edge and routed through Azure Event Hubs into tenant-isolated Azure Data Lake storage. Machine learning models continuously compute velocity anomalies, local promotions, and supplier lead-time changes.
+            </p>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="spec-item-name">Streaming Ingestion Engine</span>
+                <span class="spec-item-val">Azure Event Hubs (Kafka-compatible)</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Storage Isolation</span>
+                <span class="spec-item-val">Azure Blob Storage with CMK</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">AI Time-Series Framework</span>
+                <span class="spec-item-val">Azure ML (TFT &amp; Prophet Ensembles)</span>
+              </li>
+              <li class="spec-item">
+                <span class="spec-item-name">Identity &amp; RBAC</span>
+                <span class="spec-item-val">Microsoft Entra ID (Azure AD)</span>
+              </li>
+            </ul>
+          </div>
 
-        <article class="legal-body">
-          <h2 id="acceptance">1. Acceptance of Terms</h2>
-          <p>
-            By accessing or using the Demandra platform, APIs, or edge agents, you agree to be bound by these Terms of Service. If you are entering into these terms on behalf of a corporate entity, supermarket chain, or distribution company, you warrant that you possess the legal authority to bind such entity.
-          </p>
+          <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 2.5rem;">
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--accent-leaf); margin-bottom: 1.5rem; text-transform: uppercase;">Technical Stack Architecture</div>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.875rem;">
+              <div style="border-left: 3px solid var(--accent-leaf); padding-left: 1rem;">
+                <div style="font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">Layer 1: Edge POS Adapters</div>
+                <div style="color: var(--text-ink-muted);">Lightweight local services for Odoo, SAP Retail, Dynamics 365, and proprietary checkouts. Local SQLite buffer retains up to 72 hours of sales during fiber cuts.</div>
+              </div>
+              <div style="border-left: 3px solid var(--accent-clay); padding-left: 1rem;">
+                <div style="font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">Layer 2: Event Hubs &amp; Stream Ingestion</div>
+                <div style="color: var(--text-ink-muted);">Sub-second deduplication, schema validation, and basket tokenization. Strips customer PII while retaining anonymized product associations.</div>
+              </div>
+              <div style="border-left: 3px solid var(--accent-leaf-dark); padding-left: 1rem;">
+                <div style="font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">Layer 3: Azure Machine Learning Ensembles</div>
+                <div style="color: var(--text-ink-muted);">Temporal Fusion Transformers (TFT) evaluate seasonal shifts, payday patterns, holiday spikes, and rainfall impact on urban shopper footfall.</div>
+              </div>
+              <div style="border-left: 3px solid var(--text-ink); padding-left: 1rem;">
+                <div style="font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">Layer 4: Automated Dispatch Triggers</div>
+                <div style="color: var(--text-ink-muted);">Outputs ERP purchase orders, warehouse picklists, and inter-store balance manifests directly to central supply chain teams.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="accounts">2. Corporate Accounts &amp; Access Controls</h2>
-          <p>
-            Subscribers must ensure that all authorized users maintain strong, distinct credentials. We recommend federating access through corporate Microsoft Entra ID or Google Workspace single sign-on.
-          </p>
-          <p>
-            You are solely responsible for all activities occurring under your administrative domain and for revoking credentials when store managers or merchandising staff depart your organization.
-          </p>
+    <!-- Edge Resilience Section -->
+    <section class="inner-section alt-bg">
+      <div class="container">
+        <div class="detail-grid">
+          <div style="order: 2;" class="detail-content">
+            <div class="eyebrow-tag">OFFLINE-FIRST DURABILITY</div>
+            <h2>Engineered for real African telecommunications realities.</h2>
+            <p>
+              In West and East Africa, store internet outages and power switchovers are routine facts of life. A cloud forecasting tool that requires 100% constant connectivity will break retail operations.
+            </p>
+            <p>
+              Demandra's store agent runs on an offline-first architecture. If broadband connectivity drops at an Ikeja, Abuja, or Port Harcourt supermarket, the POS adapter buffers transactions locally in encrypted storage.
+            </p>
+            <p>
+              Once connectivity returns, the agent performs a deterministic delta reconciliation, updating the Azure ML model pipeline in seconds without duplicate record creation or dropped baskets.
+            </p>
+          </div>
+          <div style="order: 1; background: var(--bg-ivory); border: 1px solid var(--line-main); padding: 2.5rem;">
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-ink); margin-bottom: 1rem; text-transform: uppercase;">Edge Resilience Telemetry</div>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 1.25rem;">
+                <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">
+                  <span>Local Queue Depth</span>
+                  <span class="num-tabular" style="color: var(--accent-leaf);">0 Items (100% Synced)</span>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-ink-muted);">Encrypted local SQLite database holding 0 pending transactions.</div>
+              </div>
+              <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 1.25rem;">
+                <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">
+                  <span>Network Fallback Modes</span>
+                  <span class="num-tabular" style="color: var(--accent-leaf);">Fiber / 5G / 4G / Offline</span>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-ink-muted);">Automatic failover between primary fiber, cellular backup, and store cache.</div>
+              </div>
+              <div style="background: var(--bg-surface); border: 1px solid var(--line-main); padding: 1.25rem;">
+                <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-ink); margin-bottom: 0.25rem;">
+                  <span>Downtime Recovery Time</span>
+                  <span class="num-tabular" style="color: var(--accent-leaf);">&lt; 14 seconds</span>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-ink-muted);">Full delta replay speed for a 12-hour offline operational window.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="usage">3. Acceptable Use &amp; API Quotas</h2>
-          <p>
-            You agree not to reverse engineer, decompile, or disassemble any aspect of the Demandra predictive forecasting engine, or use the outputs to build a competing retail demand modeling software.
-          </p>
-          <p>
-            API usage must conform to rate limits specified in your tier schedule. Automated scripts exceeding reasonable batch parameters may be throttled to ensure infrastructure stability for all tenants.
-          </p>
+    <!-- Supported ERP & POS Systems Grid -->
+    <section class="inner-section">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: 3rem;">
+          <div class="eyebrow-tag">CONNECTIVITY ECOSYSTEM</div>
+          <h2 class="section-headline">Native connectors for your existing retail tech stack.</h2>
+        </div>
 
-          <h2 id="proprietary">4. Intellectual Property Rights</h2>
-          <p>
-            Demandra Technologies Ltd and its licensors retain all rights, title, and interest in and to the platform, machine learning models, algorithms, documentation, and user interfaces.
-          </p>
-          <p>
-            Subscriber retains complete and unencumbered ownership of all POS sales receipts, inventory counts, store operational logs, and trade secrets submitted to the platform.
-          </p>
+        <div class="cards-triad">
+          <div class="feature-card">
+            <span class="feature-card-num">CONNECTOR // 01</span>
+            <h3>Odoo &amp; Microsoft Dynamics</h3>
+            <p>Direct REST API synchronization with Odoo Community/Enterprise and Microsoft Dynamics 365 Supply Chain Management. Zero manual data entry.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card-num">CONNECTOR // 02</span>
+            <h3>SAP Retail &amp; Oracle Retail</h3>
+            <p>Enterprise connectors for SAP S/4HANA Retail, SAP ERP 6.0, and Oracle Retail Merchandising System via secure Azure API Management gateways.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-card-num">CONNECTOR // 03</span>
+            <h3>Custom POS &amp; Automated CSV</h3>
+            <p>SFTP batch ingestion or JSON webhook streams for proprietary checkout applications used by Nigerian retail chains and FMCG distributors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 id="termination">5. Term &amp; Termination</h2>
-          <p>
-            Annual subscriptions renew automatically unless either party provides written notice of non-renewal at least thirty (30) days prior to the expiration of the current billing cycle.
+    <!-- Final CTA -->
+    <section class="final-cta-block">
+      <div class="container">
+        <div class="final-cta-box">
+          <div class="eyebrow-tag" style="margin-bottom: 0;">ENTERPRISE INTEGRATION</div>
+          <h2 class="section-headline">Ready to integrate your store network?</h2>
+          <p class="section-lead">
+            Speak with our retail solutions engineering team in Lagos to test a live sandbox integration with your POS data.
           </p>
-          <p>
-            Upon termination, Subscriber will have thirty (30) days to download all historical demand forecasts, reorder logs, and ingested store data in standard CSV/JSON format, after which all tenant records are securely shredded.
-          </p>
-
-          <h2 id="liability">6. Limitation of Liability</h2>
-          <p>
-            To the maximum extent permitted by applicable Nigerian law, neither party shall be liable for indirect, incidental, or consequential damages resulting from lost sales or supplier stockouts.
-          </p>
-        </article>
+          <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button type="button" class="btn-primary" data-open-modal>
+              Get Started
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="security.html" class="btn-secondary">
+              Review Security Architecture
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

@@ -1,77 +1,366 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Privacy Policy — Demandra</title>
-<meta name="description" content="How Demandra collects, uses, and protects your data." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Bricolage+Grotesque:wght@500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css?v=1" />
-<link rel="icon" type="image/png" href="assets/logo-mark.png?v=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Notice &amp; Data Protection — Demandra</title>
+  <meta name="description" content="Demandra privacy policy, NDPR compliance, and retail data retention practices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo-mark.png">
 </head>
 <body>
-<header class="nav is-stuck">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:76px">
-    <a href="index.html" class="brand"><span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Demandra logo"></span><span style="background:#B5502E"></span></span>Demandra</a>
-    <div style="display:flex;align-items:center;gap:16px"><a href="index.html" class="btn btn--line">Back to home</a><a href="#" class="btn btn--rust">Get started</a></div>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="nav-brand-symbol" aria-label="Demandra Home">
+        <img src="assets/img/demandra-symbol@2x.png" alt="Demandra" class="brand-symbol-img" width="36" height="36" />
+      </a>
+
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <a href="solution.html" class="nav-item-link">Planning</a>
+          <a href="index.html#aisle-simulator" class="nav-item-link">Demand Intelligence</a>
+          <a href="technology.html" class="nav-item-link">Retail Operations</a>
+          <a href="about.html" class="nav-item-link">Company</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="nav-login-link">Sign In</a>
+          <button type="button" class="btn-primary" data-open-modal>
+            Get Started
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="navDrawer">
+    <a href="solution.html" class="drawer-link">Demand Planning</a>
+    <a href="index.html#aisle-simulator" class="drawer-link">Demand Intelligence</a>
+    <a href="technology.html" class="drawer-link">Retail Operations</a>
+    <a href="pricing.html" class="drawer-link">Store Capacity &amp; Plans</a>
+    <a href="security.html" class="drawer-link">Security &amp; Cloud</a>
+    <a href="about.html" class="drawer-link">About Demandra</a>
+    <a href="login.html" class="drawer-link">Retail Ops Sign In</a>
+    <button type="button" class="btn-primary" style="width: 100%; margin-top: 1rem;" data-open-modal>
+      Get Started
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
   </div>
-</header>
-<section class="section" style="padding-top:20px">
-  <div class="container legal">
-    <span class="eyebrow">Legal</span>
-    <h1 class="h2">Privacy Policy</h1>
-    <p class="legal__meta">Last updated: 27 July 2026</p>
 
-    <p>Demandra Labs Ltd ("Demandra", "we", "us") provides an AI-assisted platform that helps retailers and wholesalers forecast demand. This policy explains what we collect, how we use it, and the choices you have.</p>
+  <main id="mainContent">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <div class="breadcrumbs">
+            <a href="index.html">Demandra</a>
+            <span>/</span>
+            <span>Privacy Notice</span>
+          </div>
+          <h1 class="page-title">
+            Privacy Notice &amp; Data Governance.
+          </h1>
+          <p class="page-lead">
+            Demandra Technologies Ltd (RC 1928410) processes commercial inventory signals with strict adherence to the Nigeria Data Protection Act 2023.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Information we collect</h2>
-    <ul>
-      <li><b>Account information</b> — name, work email, organization name, and role.</li>
-      <li><b>Sales data you connect</b> — sales history, inventory levels, and SKU catalog data.</li>
-      <li><b>Usage data</b> — how you interact with the product, used to improve reliability and features.</li>
-      <li><b>Technical data</b> — device, browser, and log information collected to keep the service secure.</li>
-    </ul>
+    <section class="container">
+      <div class="legal-layout">
+        <aside class="legal-nav">
+          <a href="#information-collected" class="legal-nav-link is-active">1. Collected Telemetry</a>
+          <a href="#pii-handling" class="legal-nav-link">2. PII Stripping</a>
+          <a href="#processing-purposes" class="legal-nav-link">3. Lawful Processing</a>
+          <a href="#storage-retention" class="legal-nav-link">4. Retention &amp; Storage</a>
+          <a href="#ndpr-rights" class="legal-nav-link">5. Data Subject Rights</a>
+          <a href="#contact-dpo" class="legal-nav-link">6. Contact DPO</a>
+        </aside>
 
-    <h2>How we use your information</h2>
-    <ul>
-      <li>To forecast demand and flag stockout or overstock risk.</li>
-      <li>To generate reorder recommendations from your data.</li>
-      <li>To operate, secure, maintain, and improve the platform.</li>
-      <li>To communicate about your account, updates, and support.</li>
-    </ul>
+        <article class="legal-body">
+          <h2 id="information-collected">1. Categories of Telemetry Collected</h2>
+          <p>
+            Demandra collects data strictly required to model retail velocity and stock movements:
+          </p>
+          <ul>
+            <li><strong>Checkout Receipt Telemetry:</strong> Timestamp, store identifier, terminal ID, SKU barcode, quantity purchased, and unit retail price.</li>
+            <li><strong>Inventory Balance Logs:</strong> Physical audit counts, damaged goods write-offs, and inter-store transfer receipts.</li>
+            <li><strong>Supplier Fulfillment Data:</strong> Purchase order numbers, supplier lead times, delivery manifests, and receiving bay timestamps.</li>
+            <li><strong>Corporate Account Credentials:</strong> Corporate email addresses, user names, and role identifiers of authorized inventory managers.</li>
+          </ul>
 
-    <h2 id="data">Data protection &amp; security</h2>
-    <div class="callout"><p><b>Your sales data is yours.</b> Each organization's data is isolated in its own workspace, encrypted in transit and at rest. We do not sell your data, and we do not use one organization's data to train models shared with another.</p></div>
-    <p>You are responsible for having the appropriate basis to connect your sales and inventory data to Demandra. We apply role-based access controls, audit logging, and least-privilege practices across our infrastructure.</p>
+          <h2 id="pii-handling">2. Automatic Edge PII Stripping</h2>
+          <p>
+            Demandra is an inventory and demand forecasting platform, not a consumer tracking tool. Our store edge adapters strip all consumer Personally Identifiable Information (PII) — including credit card numbers, customer names, and telephone numbers — before receipt logs leave your local store server.
+          </p>
 
-    <h2>AI processing</h2>
-    <p>Demand forecasting and reorder recommendations are performed by AI models running on our secured cloud infrastructure. Forecasts are decision-support, not a guarantee — your team should always review recommendations before ordering.</p>
+          <h2 id="processing-purposes">3. Lawful Processing &amp; AI Modeling</h2>
+          <p>
+            Data processed by Demandra is used solely to generate statistical demand forecasts, calculate depletion velocities, compile purchase orders, and monitor warehouse turnaround times for the subscribing merchant.
+          </p>
+          <p>
+            We do not sell, rent, or trade merchant sales records to advertisers, consumer brands, or competing retailers.
+          </p>
 
-    <h2>Sharing</h2>
-    <p>We share data only with service providers who help us operate the platform (such as cloud hosting and analytics), under contracts that require them to protect it, and where required by law.</p>
+          <h2 id="storage-retention">4. Storage Security &amp; Retention</h2>
+          <p>
+            All merchant data is stored in isolated Microsoft Azure Data Lake containers located in certified Azure cloud regions. Data is retained for the duration of the commercial agreement and permanently purged within thirty (30) days of contract termination.
+          </p>
 
-    <h2>Data retention</h2>
-    <p>We retain your information for as long as your account is active or as needed to provide the service. You may request deletion of your account and associated data at any time.</p>
+          <h2 id="ndpr-rights">5. NDPR &amp; Statutory Compliance</h2>
+          <p>
+            Under the Nigeria Data Protection Act 2023, authorized corporate users hold rights to access, rectify, or request deletion of their personal identity records managed in our user directories.
+          </p>
 
-    <h2>Your rights</h2>
-    <p>Depending on your location, you may have the right to access, correct, export, or delete your personal data, and to object to or restrict certain processing. To exercise these rights, contact us at the address below.</p>
+          <h2 id="contact-dpo">6. Data Protection Officer (DPO) Contact</h2>
+          <p>
+            For privacy inquiries or audit verifications, contact our legal and compliance desk at <a href="mailto:privacy@demandra.ai" style="color: var(--accent-leaf); font-weight: 600;">privacy@demandra.ai</a> or write to: Data Protection Officer, Demandra Technologies Ltd, Plot 8, Admiralty Way, Lekki Phase 1, Lagos, Nigeria.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <h2>Contact</h2>
-    <p>Questions about this policy? Email <a href="mailto:privacy@demandra.io">privacy@demandra.io</a> or write to Demandra Labs Ltd, Data Protection Office.</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-corp-col">
+          <a href="index.html" class="brand" aria-label="Demandra Home">
+            <div class="brand-symbol">
+              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="10" fill="url(#brandGradFooter)"/>
+                <path d="M11 9H18.5C23.2 9 26.5 12.5 26.5 18C26.5 23.5 23.2 27 18.5 27H11V9Z" stroke="#F4F0E7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 18H18C20.5 18 22.5 16 22.5 13.5" stroke="#DCE8BD" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="11" cy="9" r="2" fill="#DCE8BD"/>
+                <circle cx="11" cy="27" r="2" fill="#DCE8BD"/>
+                <circle cx="18" cy="18" r="2.5" fill="#38EF7D"/>
+                <defs>
+                  <linearGradient id="brandGradFooter" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1E4533"/>
+                    <stop offset="1" stop-color="#081C15"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-title" style="color: #ffffff;">Demandra</span>
+              <span class="brand-sub" style="color: var(--accent-lime);">RETAIL INTELLIGENCE</span>
+            </div>
+          </a>
+          <p class="footer-tagline">Demand intelligence for the retail floor.</p>
+          <div class="footer-address">
+            Demandra Technologies Ltd<br />
+            Registration: RC 1928410<br />
+            Plot 8, Admiralty Way, Lekki Phase 1, Lagos, Nigeria<br />
+            Phone: +234 1 888 3490<br />
+            Email: hello@demandra.ai
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-head">Product</h4>
+          <ul class="footer-link-list">
+            <li><a href="solution.html">Demand Planning</a></li>
+            <li><a href="solution.html#replenishment">Auto-Replenishment</a></li>
+            <li><a href="index.html#aisle-simulator">Aisle Demand Model</a></li>
+            <li><a href="pricing.html">Store Pricing Plans</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-head">Trust &amp; Cloud</h4>
+          <ul class="footer-link-list">
+            <li><a href="technology.html">Azure Machine Learning</a></li>
+            <li><a href="security.html">Data Isolation &amp; CMK</a></li>
+            <li><a href="security.html#compliance">SOC 2 Alignment</a></li>
+            <li><a href="security.html#retention">Data Retention Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-head">Company</h4>
+          <ul class="footer-link-list">
+            <li><a href="about.html">About Demandra</a></li>
+            <li><a href="problem.html">The Inventory Blindspot</a></li>
+            <li><a href="about.html#founders">Founding Team</a></li>
+            <li><a href="login.html">Retail Ops Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-head">Legal</h4>
+          <ul class="footer-link-list">
+            <li><a href="legal.html">Master SaaS Agreement</a></li>
+            <li><a href="privacy.html">Privacy Notice</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="security.html">Security Overview</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; 2026 Demandra Technologies Ltd. All rights reserved. Pan-African retail intelligence infrastructure.
+        </div>
+        <div class="footer-bottom-links">
+          <div class="footer-social-icons">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Demandra on LinkedIn" title="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v7.6H9.2v-7.6H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Demandra on Facebook" title="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95Z"/></svg>
+            </a>
+          </div>
+          <span class="footer-legal-sep">·</span>
+          <a href="privacy.html" class="footer-legal-link">Privacy Notice</a>
+          <span class="footer-legal-sep">·</span>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <p style="margin-top:32px"><a href="index.html">← Back to home</a></p>
-  </div>
-</section>
-<footer class="footer" style="padding-top:0">
-  <div class="container">
-    <div class="footer__bottom" style="margin-top:0;padding-top:24px;border-top:1px solid var(--line-soft)">
-      <span>© 2026 Demandra Labs Ltd. All rights reserved.</span>
-      <div class="footer__socials"><a href="privacy.html">Privacy</a></div>
+  <!-- Enterprise Modal -->
+  <div class="modal-backdrop" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalHeading" style="margin: 0; font-size: 1.15rem;">Get Started with Demandra</h3>
+          <p style="font-size: 0.78125rem; color: var(--text-ink-muted); margin-top: 0.2rem;">Enterprise Retail Demand Intelligence Platform</p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div id="modalFormView">
+          <div class="sso-group">
+            <button type="button" class="btn-sso" id="btnSsoEntra">
+              <svg viewBox="0 0 21 21" fill="none">
+                <path fill="#f25022" d="M1 1h9v9H1z"/>
+                <path fill="#00a4ef" d="M1 11h9v9H1z"/>
+                <path fill="#7fba00" d="M11 1h9v9h-9z"/>
+                <path fill="#ffb900" d="M11 11h9v9h-9z"/>
+              </svg>
+              Continue with Microsoft Entra ID
+            </button>
+            <button type="button" class="btn-sso" id="btnSsoGoogle">
+              <svg viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 01-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/>
+                <path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1.1-3.8 1.1-2.9 0-5.3-2-6.2-4.6H2.2v2.8A11 11 0 0012 23z"/>
+                <path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 010-4.2V7.1H2.2a11 11 0 000 9.8z"/>
+                <path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 002.2 7.1l3.6 2.8C6.7 7.3 9.1 5.4 12 5.4z"/>
+              </svg>
+              Continue with Google Workspace
+            </button>
+          </div>
+
+          <div class="modal-divider">
+            <span>or create workspace with work email</span>
+          </div>
+
+          <form class="modal-form" id="demoForm">
+            <div class="form-group">
+              <label class="form-label" for="workEmail">Corporate Work Email</label>
+              <input type="email" class="form-input" id="workEmail" placeholder="inventory.head@retailchain.ng" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="storeCount">Retail Store Network Size</label>
+              <select class="form-input" id="storeCount">
+                <option value="1-5">1 – 5 Stores (Regional Trial)</option>
+                <option value="6-20">6 – 20 Stores (Growing Chain)</option>
+                <option value="21-50" selected>21 – 50 Stores (Commercial Retailer)</option>
+                <option value="50+">50+ Stores / FMCG Wholesale Distributor</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="modalPassword">Workspace Password</label>
+              <div class="password-input-wrap">
+                <input type="password" class="form-input" id="modalPassword" placeholder="Minimum 8 characters" required />
+                <button type="button" class="password-toggle-btn" id="passwordToggle" aria-label="Toggle password visibility">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+              <div class="strength-meter-wrap" id="strengthMeter">
+                <div class="strength-meter-bars">
+                  <div class="strength-segment"></div>
+                  <div class="strength-segment"></div>
+                  <div class="strength-segment"></div>
+                  <div class="strength-segment"></div>
+                </div>
+                <div class="strength-label">
+                  <span id="strengthText">Password security rating</span>
+                  <span style="color: var(--text-ink-faint);">Min 8 chars</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-size: 0.75rem; color: var(--text-ink-muted); margin-top: 0.25rem;">
+              By continuing, you agree to Demandra's <a href="terms.html" style="color: var(--accent-leaf); text-decoration: underline;">Terms of Service</a> and <a href="privacy.html" style="color: var(--accent-leaf); text-decoration: underline;">Privacy Policy</a>.
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+              Get Started
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <div id="modalProvisionView" style="display: none; padding: 0.5rem 0;">
+          <div style="text-align: center; margin-bottom: 1.25rem;">
+            <div class="provision-spinner" style="width: 28px; height: 28px; margin: 0 auto 0.75rem; border-width: 3px;"></div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--text-ink);">Provisioning Isolated Retail Sandbox</h4>
+            <p style="font-size: 0.8125rem; color: var(--text-ink-muted);">Allocating dedicated Azure resources and initial model checkpoints...</p>
+          </div>
+
+          <ul class="provision-list">
+            <li class="provision-item is-active" id="provStep1">
+              <span class="provision-icon"><div class="provision-spinner"></div></span>
+              <span>Verifying enterprise work domain &amp; Entra ID directory</span>
+            </li>
+            <li class="provision-item" id="provStep2">
+              <span class="provision-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg></span>
+              <span>Allocating Azure Blob Customer-Managed Key isolation</span>
+            </li>
+            <li class="provision-item" id="provStep3">
+              <span class="provision-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg></span>
+              <span>Compiling baseline time-series replenishment models</span>
+            </li>
+          </ul>
+        </div>
+
+        <div id="modalSuccessView" style="display: none; text-align: center; padding: 1.25rem 0;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--accent-leaf-subtle); color: var(--accent-leaf); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--text-ink); margin-bottom: 0.5rem;">Retail Workspace Ready</h4>
+          <p style="font-size: 0.875rem; color: var(--text-ink-muted); line-height: 1.55;">
+            An enterprise sandbox has been provisioned for <strong id="confirmedEmail" style="color: var(--text-ink);">retail@chain.ng</strong>. Your activation link and API keys have been dispatched.
+          </p>
+          <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.625rem;">
+            <a href="login.html" class="btn-primary" style="width: 100%; justify-content: center;">
+              Launch Retail Ops Console
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <button type="button" class="btn-secondary" data-close-modal style="width: 100%; justify-content: center;">
+              Close Window
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</footer>
-<script src="assets/app.js?v=1"></script>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
