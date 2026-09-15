@@ -5,6 +5,25 @@
    ========================================================================== */
 
 :root {
+  /* Alias variables for legacy secondary pages */
+  --green: var(--accent-emerald);
+  --muted: var(--text-muted);
+  --line: var(--border-light);
+  --line-main: var(--border-light);
+  --line-subtle: rgba(12, 20, 16, 0.05);
+  --bg-ivory: var(--bg-primary);
+  --text-ink: var(--text-main);
+  --text-ink-muted: var(--text-muted);
+  --text-ink-faint: var(--text-faint);
+  --alert-red: var(--accent-coral);
+  --accent-leaf: var(--accent-emerald);
+  --accent-leaf-dark: var(--accent-forest);
+  --accent-leaf-subtle: var(--accent-lime);
+  --accent-clay: var(--accent-amber);
+  --text-warm-white: var(--text-inverse);
+  --text-on-dark: var(--text-inverse);
+  --text-on-dark-muted: var(--text-inverse-muted);
+
   /* Color Palette */
   --bg-primary: #f6f4ed;
   --bg-surface: #ffffff;
@@ -32,6 +51,7 @@
   --border-glow: rgba(56, 239, 125, 0.35);
   
   --radius-xl: 28px;
+  --radius-2xl: 32px;
   --radius-lg: 20px;
   --radius-md: 14px;
   --radius-sm: 8px;
@@ -227,9 +247,10 @@ button {
 }
 
 .btn-secondary-dark {
-  background: rgba(12, 20, 16, 0.05);
-  color: var(--text-main);
-  border: 1px solid var(--border-light);
+    background: rgba(12, 20, 16, 0.03);
+    color: var(--text-main);
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
 }
 
 .btn-secondary-dark:hover {
@@ -464,8 +485,8 @@ button {
     rgba(8, 18, 12, 0.72) 80%,
     #08120c 100%
   );
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
+  /* backdrop-filter removed for performance */
+  -webkit-/* backdrop-filter removed for performance */
 }
 
 .hero-container {
@@ -2400,3 +2421,465 @@ button {
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
 
+
+/* --- NEW NAVBAR OVERRIDES --- */
+.nav-pill-container {
+  background: rgba(244, 240, 231, 0.95) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+.nav-link { color: #173b2a !important; }
+.nav-link:hover { color: #0f2a1d !important; }
+.btn-nav-signin { color: #173b2a !important; }
+.btn-nav-signin:hover { color: #0f2a1d !important; background: rgba(23, 59, 42, 0.08) !important; }
+.mobile-toggle svg { stroke: #173b2a !important; }
+
+/* Ensure the roadmap section looks good on homepage */
+.section-roadmap { background-color: var(--bg-primary); }
+
+/* ==========================================================================
+   11. SECONDARY PAGES (Pricing, Solution, About, etc.)
+   ========================================================================== */
+
+/* Page Hero */
+.page-hero {
+  padding: 140px 0 60px;
+  background: var(--bg-primary);
+  text-align: center;
+}
+.page-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.breadcrumbs {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.breadcrumbs a {
+  color: var(--accent-emerald);
+  text-decoration: none;
+}
+.page-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+.page-lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Inner Sections */
+.inner-section {
+  padding: 96px 0;
+  background: var(--bg-surface);
+}
+.inner-section.alt-bg {
+  background: var(--bg-primary);
+}
+
+/* Pricing Cards */
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pricing-plan-card {
+  background: var(--bg-primary);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pricing-plan-card.is-recommended {
+  border: 2px solid var(--accent-emerald);
+  background: var(--bg-surface);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.06);
+}
+.recommended-banner {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-emerald);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 750;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+.plan-tier-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+.plan-scope {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  min-height: 42px;
+}
+.plan-cost-box {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.plan-cost {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+.plan-term {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+.plan-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  flex-grow: 1;
+}
+.plan-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+.plan-feature-list li svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Final CTA Block */
+.final-cta-block {
+  padding: 60px 0 96px;
+  background: var(--bg-primary);
+}
+.final-cta-box {
+  background: var(--bg-dark);
+  border-radius: var(--radius-2xl);
+  padding: 80px 40px;
+  text-align: center;
+  color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 32px 64px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+}
+.final-cta-box .section-headline {
+  color: #fff;
+  font-size: clamp(28px, 5vw, 42px);
+}
+.final-cta-box .section-lead {
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  margin: 16px auto 32px;
+}
+
+/* Fix missing footer classes from secondary pages */
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 56px;
+  margin-bottom: 64px;
+}
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-link-list a {
+  font-size: 0.875rem;
+  color: rgba(246, 244, 237, 0.65);
+  transition: color 0.15s ease;
+  text-decoration: none;
+}
+.footer-link-list a:hover {
+  color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .pricing-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+/* ==========================================================================
+   12. ADDITIONAL SECONDARY STYLES (Solution & About Pages)
+   ========================================================================== */
+
+/* Detail Grid Layout */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+.detail-grid.reverse {
+  direction: rtl;
+}
+.detail-grid.reverse > * {
+  direction: ltr;
+}
+.detail-content {
+  max-width: 540px;
+}
+.detail-image-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.detail-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Eyebrow & Spec List */
+.eyebrow-tag {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  color: var(--accent-emerald);
+  margin-bottom: 16px;
+}
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+}
+.spec-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+.spec-list li::before {
+  content: "â€”";
+  position: absolute;
+  left: 0;
+  color: var(--accent-emerald);
+  font-weight: 800;
+}
+
+/* Section Headings inside details */
+.detail-content h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.detail-content p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness for Details */
+@media (max-width: 900px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .detail-grid.reverse {
+    direction: ltr;
+  }
+  .page-hero {
+    padding: 120px 24px 60px;
+  }
+  .inner-section {
+    padding: 64px 24px;
+  }
+}
+/* ==========================================================================
+   13. ABOUT PAGE CARDS (Team & Roadmap)
+   ========================================================================== */
+
+/* Three-column card grid (Used for Team and Roadmap) */
+.cards-triad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+/* Team Person Card */
+.person {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.person:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.person img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Feature/Roadmap Card */
+.feature-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.feature-card-num {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Mobile Responsiveness for Triads */
+@media (max-width: 900px) {
+  .cards-triad {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+/* ==========================================================================
+   13. ABOUT PAGE CARDS (Team & Roadmap)
+   ========================================================================== */
+
+/* Three-column card grid (Used for Team and Roadmap) */
+.cards-triad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+/* Team Person Card */
+.person {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.person:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.person img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Feature/Roadmap Card */
+.feature-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.feature-card-num {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Mobile Responsiveness for Triads */
+@media (max-width: 900px) {
+  .cards-triad {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.person-role-tag { position: absolute; bottom: 12px; left: 12px; font-size: 10px; letter-spacing: 0.1em; font-weight: 700; color: #fff; background: rgba(16, 21, 18, 0.78); padding: 4px 8px; border-radius: 6px; text-transform: uppercase; backdrop-filter: blur(4px); }
+
+
+
+/* Standard Section Spacing */
+.section-padding {
+  padding: 120px 0;
+}
+@media (max-width: 900px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+
+/* Global Mobile Section Padding Adjustments */
+@media (max-width: 900px) {
+  .section-blindspot, .section-value-chain, .section-decision-scene, .section-scale-proof, .section-team, .section-roadmap, .section-padding {
+    padding: 80px 0 !important;
+  }
+}

@@ -14,44 +14,48 @@
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="index.html" class="nav-brand-symbol" aria-label="Demandra Home">
-        <img src="assets/img/demandra-symbol@2x.png" alt="Demandra" class="brand-symbol-img" width="36" height="36" />
+    <!-- Header -->
+  <header class="site-nav-wrapper" id="siteNavWrapper">
+    <div class="nav-pill-container">
+      <a href="index.html" class="nav-brand-symbol" aria-label="Demandra Home">
+        <img src="assets/img/logo-dark.svg" alt="Demandra Symbol" height="32" width="130" style="object-fit: contain;">
       </a>
 
-        <nav class="nav-menu" aria-label="Primary Navigation">
-          <a href="solution.html" class="nav-item-link">Planning</a>
-          <a href="index.html#aisle-simulator" class="nav-item-link">Demand Intelligence</a>
-          <a href="technology.html" class="nav-item-link">Retail Operations</a>
-          <a href="about.html" class="nav-item-link">Company</a>
-        </nav>
+      <!-- Spacious Primary Navigation Links (Per PRD Section 5) -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="solution.html" class="nav-link">Planning</a>
+        <a href="technology.html" class="nav-link">Technology</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">Company</a>
+      </nav>
 
-        <div class="nav-actions">
-          <a href="login.html" class="nav-login-link">Sign In</a>
-          <button type="button" class="btn-primary" data-open-modal>
-            Get Started
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-          <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
-        </div>
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nav-signin">Sign In</a>
+        <button type="button" class="btn-primary btn-nav-cta" data-open-modal>
+          Get Started
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
   <div class="nav-drawer" id="navDrawer">
-    <a href="solution.html" class="drawer-link">Demand Planning</a>
-    <a href="index.html#aisle-simulator" class="drawer-link">Demand Intelligence</a>
-    <a href="technology.html" class="drawer-link">Retail Operations</a>
-    <a href="pricing.html" class="drawer-link">Store Capacity &amp; Plans</a>
-    <a href="security.html" class="drawer-link">Security &amp; Cloud</a>
-    <a href="about.html" class="drawer-link">About Demandra</a>
-    <a href="login.html" class="drawer-link">Retail Ops Sign In</a>
+    <a href="solution.html" class="drawer-link">Planning</a>
+    <a href="technology.html" class="drawer-link">Technology</a>
+    <a href="pricing.html" class="drawer-link">Pricing</a>
+    <a href="about.html" class="drawer-link">Company</a>
+    <a href="login.html" class="drawer-link">Retail Ops Portal</a>
     <button type="button" class="btn-primary" style="width: 100%; margin-top: 1rem;" data-open-modal>
       Get Started
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -138,79 +142,79 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-columns">
-        <div class="footer-corp-col">
-          <a href="index.html" class="brand" aria-label="Demandra Home">
-            <div class="brand-symbol">
-              <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="36" height="36" rx="10" fill="url(#brandGradFooter)"/>
-                <path d="M11 9H18.5C23.2 9 26.5 12.5 26.5 18C26.5 23.5 23.2 27 18.5 27H11V9Z" stroke="#F4F0E7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M11 18H18C20.5 18 22.5 16 22.5 13.5" stroke="#DCE8BD" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="11" cy="9" r="2" fill="#DCE8BD"/>
-                <circle cx="11" cy="27" r="2" fill="#DCE8BD"/>
-                <circle cx="18" cy="18" r="2.5" fill="#38EF7D"/>
-                <defs>
-                  <linearGradient id="brandGradFooter" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#1E4533"/>
-                    <stop offset="1" stop-color="#081C15"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div class="brand-text-wrap">
-              <span class="brand-title" style="color: #ffffff;">Demandra</span>
-              <span class="brand-sub" style="color: var(--accent-lime);">RETAIL INTELLIGENCE</span>
-            </div>
-          </a>
-          <p class="footer-tagline">Demand intelligence for the retail floor.</p>
-          <div class="footer-address">
-            Demandra Technologies Ltd<br />
-            Registration: RC 1928410<br />
-            Plot 8, Admiralty Way, Lekki Phase 1, Lagos, Nigeria<br />
-            Phone: +234 1 888 3490<br />
-            Email: hello@demandra.ai
+      <div class="footer-columns-grid">
+        <!-- Corporate Info with Address, Phone, and Email Placed Cleanly Under Company Name -->
+        <div>
+          <div class="footer-brand-header">
+            <a href="index.html" class="nav-brand-symbol" aria-label="Demandra Home">
+        <img src="assets/img/demandra-symbol@2x.png" alt="Demandra" class="brand-symbol-img" width="36" height="36" />
+      </a>
+            <span class="footer-brand-title">Demandra Technologies Ltd</span>
           </div>
+
+          <!-- CAC / Registration -->
+          <div class="footer-corp-meta">
+            <span class="footer-registration-pill">RC 1928410 · INCORPORATED IN NIGERIA</span>
+          </div>
+
+          <!-- ADDRESS AND PHONE PLACED DIRECTLY UNDER COMPANY NAME -->
+          <div class="footer-contact-details">
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Plot 8, Admiralty Way, Lekki Phase 1, Lagos, Nigeria</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+234 1 888 3490</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>hello@demandra.ai</span>
+            </div>
+          </div>
+
+          <p class="footer-mission">
+            Enterprise AI demand prediction and autonomous replenishment platform for commercial multi-store retail networks. Built in Nigeria, expanding across Africa.
+          </p>
         </div>
+
+        <!-- Product Group -->
         <div>
           <h4 class="footer-col-head">Product</h4>
-          <ul class="footer-link-list">
+          <ul class="footer-links-list">
             <li><a href="solution.html">Demand Planning</a></li>
+            <li><a href="#neural-engine">Neural Forecasting</a></li>
             <li><a href="solution.html#replenishment">Auto-Replenishment</a></li>
-            <li><a href="index.html#aisle-simulator">Aisle Demand Model</a></li>
-            <li><a href="pricing.html">Store Pricing Plans</a></li>
+            <li><a href="pricing.html">Capacity &amp; Store Tiers</a></li>
           </ul>
         </div>
-        <div>
-          <h4 class="footer-col-head">Trust &amp; Cloud</h4>
-          <ul class="footer-link-list">
-            <li><a href="technology.html">Azure Machine Learning</a></li>
-            <li><a href="security.html">Data Isolation &amp; CMK</a></li>
-            <li><a href="security.html#compliance">SOC 2 Alignment</a></li>
-            <li><a href="security.html#retention">Data Retention Policy</a></li>
-          </ul>
-        </div>
+
+        <!-- Company Group -->
         <div>
           <h4 class="footer-col-head">Company</h4>
-          <ul class="footer-link-list">
+          <ul class="footer-links-list">
             <li><a href="about.html">About Demandra</a></li>
-            <li><a href="problem.html">The Inventory Blindspot</a></li>
-            <li><a href="about.html#founders">Founding Team</a></li>
-            <li><a href="login.html">Retail Ops Portal</a></li>
+            <li><a href="#blindspot">The Retail Blindspot</a></li>
+            <li><a href="#team">Founding Team</a></li>
+            <li><a href="security.html">Security &amp; Azure ML</a></li>
           </ul>
         </div>
+
+        <!-- Legal Group -->
         <div>
-          <h4 class="footer-col-head">Legal</h4>
-          <ul class="footer-link-list">
-            <li><a href="legal.html">Master SaaS Agreement</a></li>
+          <h4 class="footer-col-head">Legal &amp; Compliance</h4>
+          <ul class="footer-links-list">
             <li><a href="privacy.html">Privacy Notice</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="security.html">Security Overview</a></li>
+            <li><a href="legal.html">Master SaaS Agreement</a></li>
+            <li><a href="security.html#compliance">NDPR &amp; SOC 2</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom-bar">
         <div class="footer-copyright">
-          &copy; 2026 Demandra Technologies Ltd. All rights reserved. Pan-African retail intelligence infrastructure.
+          © 2026 Demandra Technologies Ltd. All rights reserved. Registered with CAC Nigeria.
         </div>
         <div class="footer-bottom-links">
           <div class="footer-social-icons">

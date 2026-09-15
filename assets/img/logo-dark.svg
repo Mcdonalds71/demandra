@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <style>
+      .text-logo-dark {
+        font-family: 'Inter', sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        fill: #173b2a;
+        letter-spacing: -1px;
+      }
+    </style>
+  </defs>
+
+  <!-- Graphic Symbol (Isometric Box + Arrow) scaled down to fit in ~50x50 -->
+  <g transform="translate(5, 10) scale(0.6)">
+    <!-- Back faces -->
+    <polygon points="50,15 25,30 25,60 50,45" fill="#245e41" />
+    <polygon points="50,15 75,30 75,60 50,45" fill="#0f2a1d" />
+    <!-- Front faces -->
+    <polygon points="50,90 10,65 10,35 50,60" fill="#173b2a" />
+    <polygon points="50,90 90,65 90,35 50,60" fill="#0f2a1d" />
+    <!-- Top faces -->
+    <polygon points="50,60 10,35 50,10 90,35" fill="#245e41" />
+    <!-- Glowing Arrow -->
+    <path d="M10,40 L35,25 L50,45 L75,5 L85,15 L90,-5 L65,-5 L75,5 L50,40 L35,20 Z" fill="#38ef7d" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="75" y="48" class="text-logo-dark">Demandra</text>
+</svg>
